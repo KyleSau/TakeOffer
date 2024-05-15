@@ -60,18 +60,12 @@ export default sendEmail;
 export async function createContact(formData: FormData) {
     console.log('Creating contact...');
     try {
-        const name = formData.get('name') as string;
-        const company = formData.get('company') as string;
-        const email = formData.get('email') as string;
-        const phone = formData.get('phone') as string;
-        const message = formData.get('message') as string;
-
         const data = {
-            name,
-            company: company || undefined,
-            email,
-            phone,
-            message: message || undefined,
+            name: formData.get('name') as string | null,
+            company: formData.get('company') as string | null,
+            email: formData.get('email') as string | null,
+            phone: formData.get('phone') as string | null,
+            message: formData.get('message') as string | null,
         };
 
         const parsedData = contactSchema.parse(data);
@@ -79,6 +73,8 @@ export async function createContact(formData: FormData) {
         const contact = await prisma.contact.create({
             data: parsedData
         });
+
+        const { name, email, phone, message } = contact;
 
         if (contact) {
             const adminEmailTemplate = getAdminEmailTemplate({ name, email, phone, message });
