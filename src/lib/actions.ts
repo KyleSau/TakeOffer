@@ -68,6 +68,10 @@ export async function createContact(formData: FormData) {
             message: formData.get('message') as string | null,
         };
 
+        if (!data.name) {
+            throw new Error('Name is required');
+        }
+
         const parsedData = contactSchema.parse(data);
 
         const contact = await prisma.contact.create({
