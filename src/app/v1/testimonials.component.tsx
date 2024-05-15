@@ -16,7 +16,7 @@ export default function Testimonials() {
                         </blockquote>
                         <div className="flex items-center">
                             <div className="mr-4 h-10 w-10 overflow-hidden rounded-full">
-                                <img alt="Client Avatar" className="h-full w-full object-cover" src="/placeholder.svg" />
+                                {/* <img alt="Client Avatar" className="h-full w-full object-cover" src="/placeholder.svg" /> */}
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">John Doe</h3>
@@ -31,7 +31,7 @@ export default function Testimonials() {
                         </blockquote>
                         <div className="flex items-center">
                             <div className="mr-4 h-10 w-10 overflow-hidden rounded-full">
-                                <img alt="Client Avatar" className="h-full w-full object-cover" src="/placeholder.svg" />
+                                {/* <img alt="Client Avatar" className="h-full w-full object-cover" src="/placeholder.svg" /> */}
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Jane Smith</h3>
@@ -46,7 +46,7 @@ export default function Testimonials() {
                         </blockquote>
                         <div className="flex items-center">
                             <div className="mr-4 h-10 w-10 overflow-hidden rounded-full">
-                                <img alt="Client Avatar" className="h-full w-full object-cover" src="/placeholder.svg" />
+                                {/* <img alt="Client Avatar" className="h-full w-full object-cover" src="/placeholder.svg" /> */}
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Michael Johnson</h3>
@@ -61,7 +61,7 @@ export default function Testimonials() {
                         </blockquote>
                         <div className="flex items-center">
                             <div className="mr-4 h-10 w-10 overflow-hidden rounded-full">
-                                <img alt="Client Avatar" className="h-full w-full object-cover" src="/placeholder.svg" />
+                                {/* <img alt="Client Avatar" className="h-full w-full object-cover" src="/placeholder.svg" /> */}
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Emily Davis</h3>

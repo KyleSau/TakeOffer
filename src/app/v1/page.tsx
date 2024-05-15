@@ -178,7 +178,7 @@ export default function Component() {
                 </div>
                 <nav className="ml-auto flex gap-4 sm:gap-6">
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="flex items-center gap-1 hover:underline">
+                        <DropdownMenuTrigger className="flex items-center gap-1 hover:underline text-2xl">
                             Takeoffs
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end" className="w-[300px] max-h-[400px] overflow-y-auto">
@@ -196,17 +196,17 @@ export default function Component() {
                             ))}
                         </DropdownMenuContent>
                     </DropdownMenu>
-                    <Link className="flex items-center gap-1 hover:underline" href="#">
+                    <Link className="flex items-center gap-1 hover:underline text-2xl" href="#">
                         Services
                     </Link>
-                    <Link className="flex items-center gap-1 hover:underline" href="#">
+                    <Link className="flex items-center gap-1 hover:underline text-2xl" href="#">
                         Testimonials
                     </Link>
-                    <Link className="flex items-center gap-1 hover:underline" href="#">
+                    <Link className="flex items-center gap-1 hover:underline text-2xl" href="#">
                         Contact
                     </Link>
                     <Link
-                        className="inline-flex h-10 items-center justify-center rounded-md bg-sky-300 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-yellow-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-yellow-400 dark:text-gray-900 dark:hover:bg-yellow-500 dark:focus-visible:ring-gray-300"
+                        className="inline-flex h-12 w-36 justify-center items-center rounded-md bg-sky-300 text-m font-medium text-black shadow transition-colors hover:bg-yellow-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-yellow-400 dark:text-gray-900 dark:hover:bg-yellow-500 dark:focus-visible:ring-gray-300"
                         href="#"
                     >
                         Get Started
@@ -304,9 +304,6 @@ export default function Component() {
                 <section className="flex justify-center w-full py-6 md:py-12 lg:py-16">
                     <div className="container px-4 md:px-6">
                         <div className="space-y-2">
-                            <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm dark:bg-gray-800">
-                                Our Services
-                            </div>
                             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-gray-800 dark:text-gray-50">
                                 Comprehensive Construction Estimation Services
                             </h2>
