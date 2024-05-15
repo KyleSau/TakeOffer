@@ -178,59 +178,9 @@ const services = [
   }
 ];
 
-const seoDescription = `
-  <h1>Construction Estimating & Takeoff Services</h1>
-  <p>Hi, I am a quantity surveyor with a unique set of expertise in quantity surveying and cost estimation. Our team provides detailed material take-offs and zip code-based cost estimates for all architectural, structural, MEP, landscaping, and construction trades.</p>
-  
-  <h2>Our Expertise Includes but is not Limited to:</h2>
-  <ul>
-    <li>Demolition, New Work, Remodeling</li>
-    <li>Concrete, Masonry, CMU, Rebar</li>
-    <li>Finishes, Drywall, Openings (Interior/Exterior)</li>
-    <li>Metal Framing, Structural Steel, Wood, Plastics, and Composites</li>
-    <li>Paint, Stucco, Patio, Trims, Siding, Roofing, Counter-tops</li>
-    <li>Thermal and Moisture Insulation</li>
-    <li>Mechanical, Electrical, Plumbing, Fire Protection (Piping W/ Fittings, HVAC Duct Work, Plumbing Fixtures, Lighting, Power, Wiring, Site Work, Distribution, With Material/Specifications)</li>
-    <li>Earthwork, Trenching, Grading, Back-filling</li>
-  </ul>
-  <p>In short, we deal with all CSI Divisions (1-33).</p>
-  
-  <h2>Why Choose Us?</h2>
-  <ul>
-    <li>Client satisfaction comes first</li>
-    <li>Experienced team capable of handling multiple projects</li>
-    <li>Fast communication response 24/7</li>
-  </ul>
-  
-  <p>To get a quote, please contact us. We will provide you with our sample work. To avoid any confusion regarding price and time, kindly discuss your project details with us before placing an order.</p>
-  
-  <h2>Project Scale</h2>
-  <ul>
-    <li>Building Complexes</li>
-  </ul>
-  
-  <h2>Building Types</h2>
-  <ul>
-    <li>Residential</li>
-    <li>Commercial</li>
-    <li>Hospitality</li>
-  </ul>
-  
-  <h2>Drawing Types</h2>
-  <ul>
-    <li>Floor Plans</li>
-    <li>Roof Plans</li>
-  </ul>
-  
-  <p>Visit our website at <a href="https://TakeOffer.net">TakeOffer.net</a> for more information.</p>
-`;
-
-
-
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
-      <div dangerouslySetInnerHTML={{ __html: seoDescription }} />
       <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-white px-4 py-5 shadow-sm dark:bg-gray-950 md:px-6">
         <div className="flex items-center gap-6">
           <Link className="flex items-center gap-2 text-lg font-semibold" href="#">
