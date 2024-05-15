@@ -16,7 +16,7 @@ import { Badge } from "@/components/ui/badge"
 const services = [
   {
     title: "Cabinet Takeoff",
-    description: "Unlock precision in cabinetry takeoffs, tailored to fit your project's exact needs with unparalleled accuracy.",
+    description: "Unlock precision in cabinetry takeoffs, tailored to fit your project&apos;s exact needs with unparalleled accuracy.",
     image: "path_to_image/cabinet.jpg",
   },
   {
@@ -380,7 +380,7 @@ export default function Component() {
               <Card>
                 <CardContent>
                   <blockquote className="text-lg font-semibold leading-snug lg:text-xl lg:leading-normal xl:text-2xl">
-                    “TakeOffer's service has been a game changer for us. It has helped us save time and resources in our
+                    “TakeOffer&apos;s service has been a game changer for us. It has helped us save time and resources in our
                     construction projects.“
                   </blockquote>
                   <div>
