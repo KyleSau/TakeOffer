@@ -11,7 +11,9 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
 import Nav from "@/components/nav"
 import { Textarea } from "@/components/ui/textarea"
+import { createContact } from "@/lib/actions"
 import { Badge } from "@/components/ui/badge"
+import ContactForm from "@/components/contact-form"
 
 const services = [
   {
@@ -176,11 +178,59 @@ const services = [
   }
 ];
 
+const seoDescription = `
+  <h1>Construction Estimating & Takeoff Services</h1>
+  <p>Hi, I am a quantity surveyor with a unique set of expertise in quantity surveying and cost estimation. Our team provides detailed material take-offs and zip code-based cost estimates for all architectural, structural, MEP, landscaping, and construction trades.</p>
+  
+  <h2>Our Expertise Includes but is not Limited to:</h2>
+  <ul>
+    <li>Demolition, New Work, Remodeling</li>
+    <li>Concrete, Masonry, CMU, Rebar</li>
+    <li>Finishes, Drywall, Openings (Interior/Exterior)</li>
+    <li>Metal Framing, Structural Steel, Wood, Plastics, and Composites</li>
+    <li>Paint, Stucco, Patio, Trims, Siding, Roofing, Counter-tops</li>
+    <li>Thermal and Moisture Insulation</li>
+    <li>Mechanical, Electrical, Plumbing, Fire Protection (Piping W/ Fittings, HVAC Duct Work, Plumbing Fixtures, Lighting, Power, Wiring, Site Work, Distribution, With Material/Specifications)</li>
+    <li>Earthwork, Trenching, Grading, Back-filling</li>
+  </ul>
+  <p>In short, we deal with all CSI Divisions (1-33).</p>
+  
+  <h2>Why Choose Us?</h2>
+  <ul>
+    <li>Client satisfaction comes first</li>
+    <li>Experienced team capable of handling multiple projects</li>
+    <li>Fast communication response 24/7</li>
+  </ul>
+  
+  <p>To get a quote, please contact us. We will provide you with our sample work. To avoid any confusion regarding price and time, kindly discuss your project details with us before placing an order.</p>
+  
+  <h2>Project Scale</h2>
+  <ul>
+    <li>Building Complexes</li>
+  </ul>
+  
+  <h2>Building Types</h2>
+  <ul>
+    <li>Residential</li>
+    <li>Commercial</li>
+    <li>Hospitality</li>
+  </ul>
+  
+  <h2>Drawing Types</h2>
+  <ul>
+    <li>Floor Plans</li>
+    <li>Roof Plans</li>
+  </ul>
+  
+  <p>Visit our website at <a href="https://TakeOffer.net">TakeOffer.net</a> for more information.</p>
+`;
+
 
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
+      <div dangerouslySetInnerHTML={{ __html: seoDescription }} />
       <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-white px-4 py-5 shadow-sm dark:bg-gray-950 md:px-6">
         <div className="flex items-center gap-6">
           <Link className="flex items-center gap-2 text-lg font-semibold" href="#">
@@ -282,45 +332,13 @@ export default function Component() {
             <Card className="w-full w-3/4">
               <CardHeader>
                 {/* Add Lucide CircleCheck icon (green) */}
-                F
                 <CardTitle>Contact Form</CardTitle>
                 <CardDescription>
                   Want estimates or have any questions? Fill out the form and our team will get back to you.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
-                  <div className="flex flex-col md:flex-row md:space-x-4">
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" required />
-                    </div>
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="company">Company</Label>
-                      <Input id="company" required />
-                    </div>
-                  </div>
-                  <div className="flex flex-col md:flex-row md:space-x-4">
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" required type="email" />
-                    </div>
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="phone">Phone</Label>
-                      <Input id="phone" required type="tel" />
-                    </div>
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" required />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="files">Upload Files</Label>
-                    <Input id="files" pattern="[0-9]{10}"
-                      title="Please enter a valid 10-digit phone number" multiple required type="file" />
-                  </div>
-                  <Button type="submit">Submit</Button>
-                </form>
+                <ContactForm />
               </CardContent>
             </Card>
           </div>
