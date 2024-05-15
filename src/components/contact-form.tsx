@@ -7,6 +7,7 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import LoadingSpinner from './loading-spinner';
+import { SendHorizontal } from "lucide-react"
 
 export default function ContactForm() {
     const [status, setStatus] = useState('idle'); // 'loading', 'success', 'error'
@@ -90,7 +91,7 @@ export default function ContactForm() {
                 </div>
                 <div className="flex-1 space-y-1">
                     <Label htmlFor="phone">Phone</Label>
-                    <Input placeholder="0123456789" name="phone" required type="tel" />
+                    <Input placeholder="(012)-345-6789" name="phone" required type="tel" />
                     {/* {formErrors.phone && <span>{formErrors.phone[0]}</span>} */}
                 </div>
             </div>
@@ -99,7 +100,7 @@ export default function ContactForm() {
                 <Textarea placeholder="Type your message" name="message" />
                 {/* {formErrors.message && <span>{formErrors.message[0]}</span>} */}
             </div>
-            <Button type="submit">Submit</Button>
+            <Button className="bg-radius-md text-green-800 text-lg bg-green-200 hover:bg-green-400" type="submit"> <SendHorizontal className="text-xl text-gray-800 dark:text-gray-50" /></Button>
         </form>
     );
 }
