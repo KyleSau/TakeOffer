@@ -5,12 +5,8 @@
  */
 import Link from "next/link"
 import { CardContent, Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
-import Nav from "@/components/nav"
-import { Textarea } from "@/components/ui/textarea"
+import ContactForm from "@/components/contact-form"
 
 const services = [
   {
@@ -99,8 +95,6 @@ const services = [
     image: "path_to_image/wallcovering.jpg",
   }
 ];
-
-
 
 export default function Component() {
   return (
@@ -215,43 +209,12 @@ export default function Component() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
-                  <div className="flex flex-col md:flex-row md:space-x-4">
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" required />
-                    </div>
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="company">Company</Label>
-                      <Input id="company" required />
-                    </div>
-                  </div>
-                  <div className="flex flex-col md:flex-row md:space-x-4">
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" required type="email" />
-                    </div>
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="phone">Phone</Label>
-                      <Input id="phone" required type="tel" />
-                    </div>
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" required />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="files">Upload Files</Label>
-                    <Input id="files" pattern="[0-9]{10}"
-                      title="Please enter a valid 10-digit phone number" multiple required type="file" />
-                  </div>
-                  <Button type="submit">Submit</Button>
-                </form>
+                <ContactForm />
               </CardContent>
             </Card>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-6 md:py-12 lg:py-16">
           <div className="container px-4 md:px-6">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
