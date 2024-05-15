@@ -12,7 +12,7 @@ export default function ContactForm() {
     const [status, setStatus] = useState('idle'); // 'loading', 'success', 'error'
     const [errorMessage, setErrorMessage] = useState('');
     const [formErrors, setFormErrors] = useState({});
-    const [contact, setContact] = useState();
+    const [contact, setContact] = useState({ name: '', email: '' });
 
     const handleSubmit = async (event: any) => {
         event.preventDefault();
@@ -52,14 +52,11 @@ export default function ContactForm() {
     }
 
     if (status === 'success') {
-        // @ts-ignore
         return <div className="flex flex-col items-center justify-center space-y-6 py-12 md:py-24">
             <div className="flex flex-col items-center space-y-2">
-                {/* @ts-ignore */}
                 <div className="text-4xl font-bold">Thanks, {contact.name}!</div>
                 <p className="text-gray-500 dark:text-gray-400">
                     We've received your information and will be in touch soon at
-                    {/* @ts-ignore */}
                     <span className="font-medium">{" "}{contact.email}</span>.{"\n            "}
                 </p>
             </div>
@@ -77,35 +74,30 @@ export default function ContactForm() {
                 <div className="flex-1 space-y-1">
                     <Label htmlFor="name">Name</Label>
                     <Input placeholder="Full Name" name="name" required />
-                    {/* @ts-ignore */}
-                    {formErrors.name && <span>{formErrors.name[0]}</span>}
+                    {/* {formErrors.name && <span>{formErrors.name[0]}</span>} */}
                 </div>
                 <div className="flex-1 space-y-1">
                     <Label htmlFor="company">Company</Label>
                     <Input placeholder="Your Company" name="company" />
-                    {/* @ts-ignore */}
-                    {formErrors.company && <span>{formErrors.company[0]}</span>}
+                    {/* {formErrors.company && <span>{formErrors.company[0]}</span>} */}
                 </div>
             </div>
             <div className="flex flex-col md:flex-row md:space-x-4">
                 <div className="flex-1 space-y-1">
                     <Label htmlFor="email">Email</Label>
                     <Input placeholder="example@domain.com" name="email" required type="email" />
-                    {/* @ts-ignore */}
-                    {formErrors.email && <span>{formErrors.email[0]}</span>}
+                    {/* {formErrors.email && <span>{formErrors.email[0]}</span>} */}
                 </div>
                 <div className="flex-1 space-y-1">
                     <Label htmlFor="phone">Phone</Label>
                     <Input placeholder="0123456789" name="phone" required type="tel" />
-                    {/* @ts-ignore */}
-                    {formErrors.phone && <span>{formErrors.phone[0]}</span>}
+                    {/* {formErrors.phone && <span>{formErrors.phone[0]}</span>} */}
                 </div>
             </div>
             <div className="space-y-1">
                 <Label htmlFor="message">Message</Label>
                 <Textarea placeholder="Type your message" name="message" />
-                {/* @ts-ignore */}
-                {formErrors.message && <span>{formErrors.message[0]}</span>}
+                {/* {formErrors.message && <span>{formErrors.message[0]}</span>} */}
             </div>
             <Button type="submit">Submit</Button>
         </form>
