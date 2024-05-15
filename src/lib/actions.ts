@@ -80,6 +80,14 @@ export async function createContact(formData: FormData) {
             throw new Error('Name is required');
         }
 
+        if (!data.email) {
+            throw new Error('Email is required');
+        }
+
+        if (!data.phone) {
+            throw new Error('Phone number is required');
+        }
+
         const parsedData = contactSchema.parse(data);
 
         const contact = await prisma.contact.create({
