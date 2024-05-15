@@ -9,13 +9,131 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
+const services = [
+  {
+    title: "Cabinet Takeoff",
+    description: "Detailed cabinet takeoff services for accurate estimates.",
+    image: "path_to_image/cabinet.jpg",
+  },
+  {
+    title: "Civil Takeoff",
+    description: "Comprehensive civil takeoff services for your project needs.",
+    image: "path_to_image/civil.jpg",
+  },
+  {
+    title: "Cladding Takeoff",
+    description: "Precise cladding takeoff services to ensure project success.",
+    image: "path_to_image/cladding.jpg",
+  },
+  {
+    title: "Commercial Estimating",
+    description: "Professional commercial estimating services for accurate budgeting.",
+    image: "path_to_image/commercial.jpg",
+  },
+  {
+    title: "Concrete Estimating Services",
+    description: "Reliable concrete estimating services for your construction projects.",
+    image: "path_to_image/concrete.jpg",
+  },
+  {
+    title: "Doors & Windows Takeoff",
+    description: "Accurate doors and windows takeoff services to streamline your project.",
+    image: "path_to_image/doors_windows.jpg",
+  },
+  {
+    title: "Drywall Takeoff",
+    description: "Efficient drywall takeoff services to ensure project efficiency.",
+    image: "path_to_image/drywall.jpg",
+  },
+  {
+    title: "EIFS Takeoff",
+    description: "Comprehensive EIFS takeoff services for your construction needs.",
+    image: "path_to_image/eifs.jpg",
+  },
+  {
+    title: "Electrical Estimating Services",
+    description: "Professional electrical estimating services for accurate planning.",
+    image: "path_to_image/electrical.jpg",
+  },
+  {
+    title: "Flooring Estimating Services",
+    description: "Detailed flooring estimating services for precise budgeting.",
+    image: "path_to_image/flooring.jpg",
+  },
+  {
+    title: "Framing Takeoff",
+    description: "Accurate framing takeoff services to support your construction project.",
+    image: "path_to_image/framing.jpg",
+  },
+  {
+    title: "Home Renovation Takeoff",
+    description: "Comprehensive home renovation takeoff services for your remodeling projects.",
+    image: "path_to_image/home_renovation.jpg",
+  },
+  {
+    title: "HVAC Takeoff",
+    description: "Efficient HVAC takeoff services to ensure accurate system planning.",
+    image: "path_to_image/hvac.jpg",
+  },
+  {
+    title: "Insulation Estimating Services",
+    description: "Reliable insulation estimating services for your construction needs.",
+    image: "path_to_image/insulation.jpg",
+  },
+  {
+    title: "Landscaping Estimating Services",
+    description: "Professional landscaping estimating services for your outdoor projects.",
+    image: "path_to_image/landscaping.jpg",
+  },
+  {
+    title: "Lumber Takeoff",
+    description: "Accurate lumber takeoff services for precise material estimation.",
+    image: "path_to_image/lumber.jpg",
+  },
+  {
+    title: "Masonry Estimating Services",
+    description: "Detailed masonry estimating services for reliable project planning.",
+    image: "path_to_image/masonry.jpg",
+  },
+  {
+    title: "Metal Framing Takeoff",
+    description: "Efficient metal framing takeoff services for your construction projects.",
+    image: "path_to_image/metal_framing.jpg",
+  },
+  {
+    title: "Millwork Estimating Services",
+    description: "Professional millwork estimating services for accurate project planning.",
+    image: "path_to_image/millwork.jpg",
+  },
+  {
+    title: "Painting Takeoff",
+    description: "Detailed painting takeoff services for precise project estimation.",
+    image: "path_to_image/painting.jpg",
+  },
+  {
+    title: "Plumbing Estimating Services",
+    description: "Reliable plumbing estimating services for your construction needs.",
+    image: "path_to_image/plumbing.jpg",
+  },
+  {
+    title: "Precast Takeoff",
+    description: "Accurate precast takeoff services to support your construction projects.",
+    image: "path_to_image/precast.jpg",
+  },
+  {
+    title: "Reinforcing Steel Takeoff",
+    description: "Efficient reinforcing steel takeoff services for precise material planning.",
+    image: "path_to_image/reinforcing_steel.jpg",
+  }
+];
+
+
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          {/* <ConstructionIcon className="h-6 w-6" /> */}
-          <span>Take Offer</span>
+        <Link className="flex items-center justify-center font-bold text-2xl" href="#">
+          Take Offer
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
@@ -90,7 +208,9 @@ export default function Component() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Our Services</div>
+              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                Our Services
+              </div>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Comprehensive Construction Estimation Services
               </h2>
@@ -98,7 +218,17 @@ export default function Component() {
                 We offer a wide range of construction estimation services to meet your project needs.
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8" />
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex flex-col items-center justify-center">
+                  <img src={service.image} alt={service.title} className="h-32 w-32 object-cover" />
+                  <h3 className="text-lg font-semibold mt-2">{service.title}</h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-center mt-2">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
