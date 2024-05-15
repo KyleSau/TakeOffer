@@ -5,14 +5,7 @@
  */
 import Link from "next/link"
 import { CardContent, Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
-import Nav from "@/components/nav"
-import { Textarea } from "@/components/ui/textarea"
-import { createContact } from "@/lib/actions"
-import { Badge } from "@/components/ui/badge"
 import ContactForm from "@/components/contact-form"
 
 const services = [
