@@ -14,8 +14,8 @@ export default function Component() {
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-14 flex items-center">
         <Link className="flex items-center justify-center" href="#">
-          <ConstructionIcon className="h-6 w-6" />
-          <span className="sr-only">TakeOffer</span>
+          {/* <ConstructionIcon className="h-6 w-6" /> */}
+          <span>Take Offer</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
@@ -81,7 +81,7 @@ export default function Component() {
                 alt="Hero"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
                 height="550"
-                src="/placeholder.svg"
+                src="/woman-takeoff.webp"
                 width="550"
               />
             </div>
