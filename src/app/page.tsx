@@ -4,12 +4,13 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import Link from "next/link"
-import { CardContent, Card } from "@/components/ui/card"
+import { CardContent, Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
 import Nav from "@/components/nav"
+import { Textarea } from "@/components/ui/textarea"
 
 const services = [
   {
@@ -355,38 +356,49 @@ export default function Component() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Contact Us</h2>
-              <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Have any questions or need help? Fill out the form and our team will get back to you.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
-              <form className="space-y-4">
-                <div className="space-y-1">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" required />
-                </div>
-                <div className="space-y-1">
-                  <Label htmlFor="company">Company</Label>
-                  <Input id="company" required />
-                </div>
-                <div className="space-y-1">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" required type="email" />
-                </div>
-                <div className="space-y-1">
-                  <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" required type="tel" />
-                </div>
-                <div className="space-y-1">
-                  <Label htmlFor="files">Upload Files</Label>
-                  <Input id="files" multiple required type="file" />
-                </div>
-                <Button type="submit">Submit</Button>
-              </form>
-            </div>
+          <div className="flex min-[400px]:flex-row justify-center">
+            <Card className="w-full w-3/4">
+              <CardHeader>
+                <CardTitle>Contact Form</CardTitle>
+                <CardDescription>
+                  Have any questions or need help? Fill out the form and our team will get back to you.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form className="space-y-4">
+                  <div className="flex flex-col md:flex-row md:space-x-4">
+                    <div className="flex-1 space-y-1">
+                      <Label htmlFor="name">Name</Label>
+                      <Input id="name" required />
+                    </div>
+                    <div className="flex-1 space-y-1">
+                      <Label htmlFor="company">Company</Label>
+                      <Input id="company" required />
+                    </div>
+                  </div>
+                  <div className="flex flex-col md:flex-row md:space-x-4">
+                    <div className="flex-1 space-y-1">
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" required type="email" />
+                    </div>
+                    <div className="flex-1 space-y-1">
+                      <Label htmlFor="phone">Phone</Label>
+                      <Input id="phone" required type="tel" />
+                    </div>
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea id="message" required />
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="files">Upload Files</Label>
+                    <Input id="files" pattern="[0-9]{10}"
+                      title="Please enter a valid 10-digit phone number" multiple required type="file" />
+                  </div>
+                  <Button type="submit">Submit</Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
