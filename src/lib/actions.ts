@@ -56,6 +56,14 @@ async function sendEmail(target, subject, htmlContent) {
 
 export default sendEmail;
 
+type ContactCreateInput = {
+    name: string;
+    company?: string | null;
+    email: string;
+    phone?: string;
+    message?: string | null;
+};
+
 
 export async function createContact(formData: FormData) {
     console.log('Creating contact...');
@@ -75,7 +83,7 @@ export async function createContact(formData: FormData) {
         const parsedData = contactSchema.parse(data);
 
         const contact = await prisma.contact.create({
-            data: parsedData
+            data: parsedData as ContactCreateInput
         });
 
         const { name, email, phone, message } = contact;
