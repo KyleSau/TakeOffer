@@ -90,8 +90,16 @@ export async function createContact(formData: FormData) {
 
         const parsedData = contactSchema.parse(data);
 
+        const contactPrisma = {
+            name: data.name,
+            company: data.company,
+            email: data.email,
+            phone: data.email,
+            message: data.message
+        };
+
         const contact = await prisma.contact.create({
-            data: parsedData as ContactCreateInput
+            data: contactPrisma
         });
 
         const { name, email, phone, message } = contact;
