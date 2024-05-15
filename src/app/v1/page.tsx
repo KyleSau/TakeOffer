@@ -8,39 +8,24 @@ import { Clock, Calculator, Target, Headphones, MessageCircle } from 'lucide-rea
 
 const services = [
     {
-        title: "Cabinet Takeoff",
-        description: "Unlock precision in cabinetry takeoffs, tailored to fit your project&apos;s exact needs with unparalleled accuracy.",
-        image: "path_to_image/cabinet.jpg",
-    },
-    {
-        title: "Civil Takeoff",
-        description: "A comprehensive analysis and quantification of all materials and work required for civil engineering and infrastructure projects.",
-        image: "path_to_image/civil.jpg",
-    },
-    {
         title: "Cladding Takeoff",
         description: "A detailed measurement and quantification of materials required for the exterior covering or facade of buildings and structures.",
-        image: "path_to_image/cladding.jpg",
-    },
-    {
-        title: "Commercial Estimating",
-        description: "Materials, labor, and equipment for commercial building projects, essential for accurate budgeting, scheduling, and procurement.",
-        image: "path_to_image/commercial.jpg",
+        image: "cladding.jpeg",
     },
     {
         title: "Concrete Estimating Services",
         description: "The volume, cost, and materials needed for concrete structures, crucial for budgeting and material procurement.",
-        image: "path_to_image/concrete.jpg",
+        image: "concrete.jpg",
     },
     {
         title: "Doors & Windows Takeoff",
         description: "Find out the number, sizes, types, and finishes of doors and windows for a construction project.",
-        image: "path_to_image/doors_windows.jpg",
+        image: "doorswindows.jpeg",
     },
     {
         title: "Drywall Takeoff",
         description: "Quantify sheets, compound, tape, and fasteners for precise budgeting and material adequacy in wall and ceiling installations.",
-        image: "path_to_image/drywall.jpg",
+        image: "drywall.jpg",
     },
     {
         title: "EIFS Takeoff",
@@ -61,16 +46,6 @@ const services = [
         title: "Framing Takeoff",
         description: "All materials required for the structural framework, including lumber, nails, metal connectors, and sheathing.",
         image: "path_to_image/framing.jpg",
-    },
-    {
-        title: "Home Renovation Takeoff",
-        description: "Quantifies materials, fixtures, and finishes for home updates, covering structural, electrical, and plumbing.",
-        image: "path_to_image/home_renovation.jpg",
-    },
-    {
-        title: "HVAC Takeoff",
-        description: "The quantities and types of heating, ventilation, and air conditioning units and materials needed for a project.",
-        image: "path_to_image/hvac.jpg",
     },
     {
         title: "Insulation Estimating Services",
@@ -104,7 +79,7 @@ const services = [
     },
     {
         title: "Painting Takeoff",
-        description: "It methodically assesses the area to be painted, calculates the types and quantities of paint, primer, and other materials needed.",
+        description: "Assess the area to be painted, calculates the types and quantities of paint, primer, and other materials needed.",
         image: "path_to_image/painting.jpg",
     },
     {
@@ -113,19 +88,9 @@ const services = [
         image: "path_to_image/plumbing.jpg",
     },
     {
-        title: "Precast Takeoff",
-        description: "The specifications and quantities of precast concrete elements required for projects.",
-        image: "path_to_image/precast.jpg",
-    },
-    {
         title: "Reinforcing Steel Takeoff",
         description: "The quantities and specifications of reinforcing bars (rebar) required.",
         image: "path_to_image/reinforcing_steel.jpg",
-    },
-    {
-        title: "Residential Estimating",
-        description: "The quantities and costs of all materials, labor, and equipment needed for residential projects.",
-        image: "path_to_image/residential.jpg",
     },
     {
         title: "Roofing Estimating Services",
