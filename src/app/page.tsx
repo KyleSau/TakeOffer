@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
 import Nav from "@/components/nav"
 import { Textarea } from "@/components/ui/textarea"
+import { Badge } from "@/components/ui/badge"
 
 const services = [
   {
@@ -277,6 +278,54 @@ export default function Component() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="flex min-[400px]:flex-row justify-center">
+            <Card className="w-full w-3/4">
+              <CardHeader>
+                {/* Add Lucide CircleCheck icon (green) */}
+                F
+                <CardTitle>Contact Form</CardTitle>
+                <CardDescription>
+                  Want estimates or have any questions? Fill out the form and our team will get back to you.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form className="space-y-4">
+                  <div className="flex flex-col md:flex-row md:space-x-4">
+                    <div className="flex-1 space-y-1">
+                      <Label htmlFor="name">Name</Label>
+                      <Input id="name" required />
+                    </div>
+                    <div className="flex-1 space-y-1">
+                      <Label htmlFor="company">Company</Label>
+                      <Input id="company" required />
+                    </div>
+                  </div>
+                  <div className="flex flex-col md:flex-row md:space-x-4">
+                    <div className="flex-1 space-y-1">
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" required type="email" />
+                    </div>
+                    <div className="flex-1 space-y-1">
+                      <Label htmlFor="phone">Phone</Label>
+                      <Input id="phone" required type="tel" />
+                    </div>
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea id="message" required />
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="files">Upload Files</Label>
+                    <Input id="files" pattern="[0-9]{10}"
+                      title="Please enter a valid 10-digit phone number" multiple required type="file" />
+                  </div>
+                  <Button type="submit">Submit</Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
@@ -353,52 +402,6 @@ export default function Component() {
                 </CardContent>
               </Card>
             </div>
-          </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="flex min-[400px]:flex-row justify-center">
-            <Card className="w-full w-3/4">
-              <CardHeader>
-                <CardTitle>Contact Form</CardTitle>
-                <CardDescription>
-                  Have any questions or need help? Fill out the form and our team will get back to you.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-4">
-                  <div className="flex flex-col md:flex-row md:space-x-4">
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" required />
-                    </div>
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="company">Company</Label>
-                      <Input id="company" required />
-                    </div>
-                  </div>
-                  <div className="flex flex-col md:flex-row md:space-x-4">
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" required type="email" />
-                    </div>
-                    <div className="flex-1 space-y-1">
-                      <Label htmlFor="phone">Phone</Label>
-                      <Input id="phone" required type="tel" />
-                    </div>
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" required />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="files">Upload Files</Label>
-                    <Input id="files" pattern="[0-9]{10}"
-                      title="Please enter a valid 10-digit phone number" multiple required type="file" />
-                  </div>
-                  <Button type="submit">Submit</Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
