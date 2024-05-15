@@ -8,142 +8,211 @@ import { CardContent, Card } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
 import Nav from "@/components/nav"
 
 const services = [
   {
     title: "Cabinet Takeoff",
-    description: "Detailed cabinet takeoff services for accurate estimates.",
+    description: "Unlock precision in cabinetry takeoffs, tailored to fit your project's exact needs with unparalleled accuracy.",
     image: "path_to_image/cabinet.jpg",
   },
   {
     title: "Civil Takeoff",
-    description: "Comprehensive civil takeoff services for your project needs.",
+    description: "A comprehensive analysis and quantification of all materials and work required for civil engineering and infrastructure projects.",
     image: "path_to_image/civil.jpg",
   },
   {
     title: "Cladding Takeoff",
-    description: "Precise cladding takeoff services to ensure project success.",
+    description: "A detailed measurement and quantification of materials required for the exterior covering or facade of buildings and structures.",
     image: "path_to_image/cladding.jpg",
   },
   {
     title: "Commercial Estimating",
-    description: "Professional commercial estimating services for accurate budgeting.",
+    description: "Materials, labor, and equipment for commercial building projects, essential for accurate budgeting, scheduling, and procurement.",
     image: "path_to_image/commercial.jpg",
   },
   {
     title: "Concrete Estimating Services",
-    description: "Reliable concrete estimating services for your construction projects.",
+    description: "The volume, cost, and materials needed for concrete structures, crucial for budgeting and material procurement.",
     image: "path_to_image/concrete.jpg",
   },
   {
     title: "Doors & Windows Takeoff",
-    description: "Accurate doors and windows takeoff services to streamline your project.",
+    description: "Find out the number, sizes, types, and finishes of doors and windows for a construction project.",
     image: "path_to_image/doors_windows.jpg",
   },
   {
     title: "Drywall Takeoff",
-    description: "Efficient drywall takeoff services to ensure project efficiency.",
+    description: "Quantify sheets, compound, tape, and fasteners for precise budgeting and material adequacy in wall and ceiling installations.",
     image: "path_to_image/drywall.jpg",
   },
   {
     title: "EIFS Takeoff",
-    description: "Comprehensive EIFS takeoff services for your construction needs.",
+    description: "Quantify the materials for insulation and finish systems, key for thermal efficiency and aesthetics in construction.",
     image: "path_to_image/eifs.jpg",
   },
   {
     title: "Electrical Estimating Services",
-    description: "Professional electrical estimating services for accurate planning.",
+    description: "All lighting fixtures, switches, outlets, and other electrical components required for a construction project.",
     image: "path_to_image/electrical.jpg",
   },
   {
     title: "Flooring Estimating Services",
-    description: "Detailed flooring estimating services for precise budgeting.",
+    description: "The types, quantities, and costs of flooring materials needed for a project, including tile, hardwood, carpet, and underlayment.",
     image: "path_to_image/flooring.jpg",
   },
   {
     title: "Framing Takeoff",
-    description: "Accurate framing takeoff services to support your construction project.",
+    description: "All materials required for the structural framework, including lumber, nails, metal connectors, and sheathing.",
     image: "path_to_image/framing.jpg",
   },
   {
     title: "Home Renovation Takeoff",
-    description: "Comprehensive home renovation takeoff services for your remodeling projects.",
+    description: "Quantifies materials, fixtures, and finishes for home updates, covering structural, electrical, and plumbing.",
     image: "path_to_image/home_renovation.jpg",
   },
   {
     title: "HVAC Takeoff",
-    description: "Efficient HVAC takeoff services to ensure accurate system planning.",
+    description: "The quantities and types of heating, ventilation, and air conditioning units and materials needed for a project.",
     image: "path_to_image/hvac.jpg",
   },
   {
     title: "Insulation Estimating Services",
-    description: "Reliable insulation estimating services for your construction needs.",
+    description: "Calculates the amount of insulation material needed for a project, including type, thickness, and area coverage.",
     image: "path_to_image/insulation.jpg",
   },
   {
     title: "Landscaping Estimating Services",
-    description: "Professional landscaping estimating services for your outdoor projects.",
+    description: "We calculate the quantities and types of materials needed for your landscaping projects.",
     image: "path_to_image/landscaping.jpg",
   },
   {
     title: "Lumber Takeoff",
-    description: "Accurate lumber takeoff services for precise material estimation.",
+    description: "The quantities and types of lumber required for construction projects, ensuring precise material procurement.",
     image: "path_to_image/lumber.jpg",
   },
   {
     title: "Masonry Estimating Services",
-    description: "Detailed masonry estimating services for reliable project planning.",
+    description: "Quantifies the various types of bricks, blocks, stones, mortar, and other masonry materials needed.",
     image: "path_to_image/masonry.jpg",
   },
   {
     title: "Metal Framing Takeoff",
-    description: "Efficient metal framing takeoff services for your construction projects.",
+    description: "The quantities and specifications of metal studs, tracks, fasteners, and other components required for framing construction projects.",
     image: "path_to_image/metal_framing.jpg",
   },
   {
     title: "Millwork Estimating Services",
-    description: "Professional millwork estimating services for accurate project planning.",
+    description: "The types and quantities of custom-made architectural woodwork and cabinetry, required for construction projects.",
     image: "path_to_image/millwork.jpg",
   },
   {
     title: "Painting Takeoff",
-    description: "Detailed painting takeoff services for precise project estimation.",
+    description: "It methodically assesses the area to be painted, calculates the types and quantities of paint, primer, and other materials needed.",
     image: "path_to_image/painting.jpg",
   },
   {
     title: "Plumbing Estimating Services",
-    description: "Reliable plumbing estimating services for your construction needs.",
+    description: "The types and quantities of plumbing fixtures such as sinks, faucets, toilets, showers, and more.",
     image: "path_to_image/plumbing.jpg",
   },
   {
     title: "Precast Takeoff",
-    description: "Accurate precast takeoff services to support your construction projects.",
+    description: "The specifications and quantities of precast concrete elements required for projects.",
     image: "path_to_image/precast.jpg",
   },
   {
     title: "Reinforcing Steel Takeoff",
-    description: "Efficient reinforcing steel takeoff services for precise material planning.",
+    description: "The quantities and specifications of reinforcing bars (rebar) required.",
     image: "path_to_image/reinforcing_steel.jpg",
+  },
+  {
+    title: "Residential Estimating",
+    description: "The quantities and costs of all materials, labor, and equipment needed for residential projects.",
+    image: "path_to_image/residential.jpg",
+  },
+  {
+    title: "Roofing Estimating Services",
+    description: "The quantities and specifications of roofing materials, such as shingles, tiles, underlayment, flashing, and nails.",
+    image: "path_to_image/roofing.jpg",
+  },
+  {
+    title: "Siding Takeoff",
+    description: "The specifications and quantities of siding materials, such as vinyl, wood, fiber cement, or metal panels.",
+    image: "path_to_image/siding.jpg",
+  },
+  {
+    title: "Site Work Takeoff",
+    description: "The quantities of all materials, labor, and equipment needed for site preparation and development. Earthwork / Excavation.",
+    image: "path_to_image/site_work.jpg",
+  },
+  {
+    title: "Steel Framing Takeoff",
+    description: "The quantities and specifications of steel framing materials, including beams, columns, studs, and joists.",
+    image: "path_to_image/steel_framing.jpg",
+  },
+  {
+    title: "Stucco Takeoff",
+    description: "The specifications and quantities of stucco materials, such as cement, sand, lime, and additives.",
+    image: "path_to_image/stucco.jpg",
+  },
+  {
+    title: "Tenant Improvement Takeoff",
+    description: "The quantities and costs of all materials, labor, and equipment for renovating or customizing commercial spaces.",
+    image: "path_to_image/tenant_improvement.jpg",
+  },
+  {
+    title: "Tile Takeoff",
+    description: "The quantities and specifications of tile materials, including ceramic, porcelain, glass, or stone tiles.",
+    image: "path_to_image/tile.jpg",
+  },
+  {
+    title: "Wallcovering Takeoff",
+    description: "The specifications and quantities of materials, such as wallpaper, paint, fabric, or decorative panels, required for interior or exterior walls.",
+    image: "path_to_image/wallcovering.jpg",
   }
 ];
+
 
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center font-bold text-2xl" href="#">
-          Take Offer
-        </Link>
+      <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-white px-4 py-5 shadow-sm dark:bg-gray-950 md:px-6">
+        <div className="flex items-center gap-6">
+          <Link className="flex items-center gap-2 text-lg font-semibold" href="#">
+            <span className="sr-only">Acme Construction</span>
+          </Link>
+        </div>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 hover:underline">
+              Takeoffs
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-[300px] max-h-[400px] overflow-y-auto">
+              <DropdownMenuLabel className="px-4 py-2 text-sm font-medium">Takeoff Services</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              {services.map((service, index) => (
+                <DropdownMenuItem key={index}>
+                  <Link
+                    className="flex items-center justify-between w-full px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
+                    href="#"
+                  >
+                    <span>{service.title}</span>
+                    {/* <ChevronRightIcon className="h-4 w-4" /> */}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Link className="flex items-center gap-1 hover:underline" href="#">
             Services
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link className="flex items-center gap-1 hover:underline" href="#">
             Testimonials
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link className="flex items-center gap-1 hover:underline" href="#">
             Contact
           </Link>
         </nav>
