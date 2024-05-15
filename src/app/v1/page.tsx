@@ -265,7 +265,7 @@ export default function Component() {
                         <div className="hidden md:block self-center w-px h-12 bg-gray-200 dark:bg-gray-700"></div> {/* Bar Divider */}
 
                         <div className="flex flex-col items-center">
-                            <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-50">Top-Tier</h3>
+                            <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-50">Precise</h3>
                             <p className="text-gray-600 dark:text-gray-600">Accuracy</p>
                             <Target className="text-xl text-gray-800 dark:text-gray-50" />
                         </div>
