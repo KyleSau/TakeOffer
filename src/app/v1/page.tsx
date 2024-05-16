@@ -196,18 +196,18 @@ export default function Component() {
                             ))}
                         </DropdownMenuContent>
                     </DropdownMenu>
-                    <Link className="flex items-center gap-1 hover:underline" href="#">
+                    <Link className="flex items-center gap-1 hover:underline" href="#services">
                         Services
                     </Link>
-                    <Link className="flex items-center gap-1 hover:underline" href="#">
+                    <Link className="flex items-center gap-1 hover:underline" href="#testimonials">
                         Testimonials
                     </Link>
-                    <Link className="flex items-center gap-1 hover:underline" href="#">
+                    <Link className="flex items-center gap-1 hover:underline" href="#contact">
                         Contact
                     </Link>
                     <Link
                         className="inline-flex h-10 items-center justify-center rounded-md bg-sky-300 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-yellow-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-yellow-400 dark:text-gray-900 dark:hover:bg-yellow-500 dark:focus-visible:ring-gray-300"
-                        href="#"
+                        href="#contact"
                     >
                         Get Started
                     </Link>
@@ -301,7 +301,7 @@ export default function Component() {
                         </Card>
                     </div>
                 </section>
-                <section className="flex justify-center w-full py-6 md:py-12 lg:py-16">
+                <section id="services" className="flex justify-center w-full py-6 md:py-12 lg:py-16">
                     <div className="container px-4 md:px-6">
                         <div className="space-y-2">
                             <div className="inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm dark:bg-gray-800">
@@ -327,7 +327,7 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-sky-600 dark:bg-gray-800">
+                <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-sky-600 dark:bg-gray-800">
                     <Testimonials />
                 </section>
             </main>
