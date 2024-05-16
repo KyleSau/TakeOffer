@@ -164,40 +164,41 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-                <section className="container mx-auto py-12 md:py-24 lg:py-32 dark:bg-gray-800">
+                <section className="container mx-auto py-6 md:py-12 lg:py-16 dark:bg-gray-800">
                     <div className="flex flex-col items-center mb-8">
-                        <div className="grid grid-cols-4 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="col-span-1  flex flex-col items-center justify-center">
                                 <CircleDollarSign className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
-                                <h1 className="text-2xl font-bold">Competetive Pricing</h1>
-                                <p className="text-lg text-gray-700 dark:text-gray-300 p-5 h-full">
+                                <h1 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">Competitive Pricing</h1>
+                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5">
                                     Experience the edge of competitive pricing with our construction estimate services, boasting an unparalleled 99% accuracy rate. Bid confidently with tailored project costs that eliminate overruns, ensuring a balanced budget every time.
                                 </p>
                             </div>
                             <div className="col-span-1 flex flex-col items-center justify-center">
                                 <Check className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
-                                <h1 className="text-2xl font-bold">Cost-Effective Outsourcing</h1>
-                                <p className="text-lg text-gray-700 p-5 dark:text-gray-300 h-full">
+                                <h1 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">Cost-Effective</h1>
+                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5">
                                     Unlock cost-effective outsourcing solutions tailored to your needs. Say goodbye to full-time estimator expenses and hello to affordable, top-quality takeoffs. Pay only for the hours you require, maximizing your budget without compromising on excellence.
                                 </p>
                             </div>
                             <div className="col-span-1 flex flex-col items-center justify-center">
                                 <Clock className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
-                                <h1 className="text-2xl font-bold">Fast Turnaround Time</h1>
-                                <p className="text-lg text-gray-700 p-5 dark:text-gray-300 h-full">
+                                <h1 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">Fast Turnaround Time</h1>
+                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5">
                                     Speed is the name of the game with our fast turnaround times. Get estimates and takeoffs promptly to stay ahead of the curve in the market. Effortlessly meet your deadlines and secure lucrative opportunities with ease.
                                 </p>
                             </div>
                             <div className="col-span-1 flex flex-col items-center justify-center">
                                 <LineChart className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
-                                <h1 className="text-2xl font-bold">Efficiency and Growth</h1>
-                                <p className="text-lg p-5 text-gray-700 dark:text-gray-300 h-full">
+                                <h1 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">Efficiency and Growth</h1>
+                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5">
                                     Efficiency fuels growth, and our services are your ticket to both. Streamline operations and pave the way for expansion by outsourcing your estimates to us. Free up valuable resources for bigger bids and watch your business soar.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
                     <div className="container">
                         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
