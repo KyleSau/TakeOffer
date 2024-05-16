@@ -150,7 +150,7 @@ export default function Component() {
                                     </h1>
 
                                     <p className="max-w-full font-bold text-gray-100 text-xl dark:text-gray-400">
-                                        Material Takeoff For Residential & Commercial Construction Projects
+                                        Material Takeoff For Residential & Commercial Construction Projects. Handle More Bids, Win More Projects.
                                     </p>
                                 </div>
                                 <div className="flex flex-col gap-2">
@@ -159,12 +159,6 @@ export default function Component() {
                                         href="#contact"
                                     >
                                         Get Started
-                                    </Link>
-                                    <Link
-                                        className="flex h-10 w-1/3 items-center justify-center rounded-full border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-200 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                                        href="#"
-                                    >
-                                        Contact Sales
                                     </Link>
                                 </div>
                             </div>

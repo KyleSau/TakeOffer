@@ -26,14 +26,14 @@ const Navbar = () => {
                     className={`fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center space-y-4 transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
                         } md:static md:w-auto md:h-auto md:bg-transparent md:flex-row md:translate-x-0 md:space-y-0 md:space-x-6`}
                 >
-                    <Link onClick={handleLinkClick} href="#services">
+                    <Link className="text-xl" onClick={handleLinkClick} href="#services">
                         Services
                     </Link>
-                    <Link onClick={handleLinkClick} href="#testimonials">
-                        Testimonials
-                    </Link>
-                    <Link onClick={handleLinkClick} href="#contact">
+                    <Link className="text-xl" onClick={handleLinkClick} href="#contact">
                         Get Started
+                    </Link>
+                    <Link className="text-xl" onClick={handleLinkClick} href="#contact">
+                        Pricing
                     </Link>
                 </nav>
             </div>
