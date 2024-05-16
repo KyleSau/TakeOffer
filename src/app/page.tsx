@@ -3,10 +3,37 @@ import Link from "next/link";
 import { CardContent, Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ContactForm from "@/components/contact-form";
 import Testimonials from "./testimonials.component";
-import { Mail, Phone, X, Menu, Clock, Calculator, Target, Headphones, MessageCircle, MailIcon, PhoneIcon, ClockIcon, CircleDollarSign, Check, LineChart, CircleCheck, CircleCheckBig } from 'lucide-react';
-import { useState } from "react";
+import { CircleCheckBig, Mail, Phone, X, Menu, Clock, Calculator, Target, Headphones, MessageCircle, MailIcon, PhoneIcon, ClockIcon, CircleDollarSign, Check, LineChart } from 'lucide-react';
 import Navbar from "./navbar";
-import Head from 'next/head'
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+
+const faqData = [
+    {
+        "question": "What Estimate & Takeoff Services Does TakeOffer Offer?",
+        "answer": "TakeOffer specializes in providing detailed estimating services for a diverse range of projects, including residential, commercial, and industrial constructions. Read more about our material takeoffs."
+    },
+    {
+        "question": "How Can Your Estimating Services Benefit My Construction Project?",
+        "answer": "Our estimating services provide accurate and comprehensive material assessments, allowing you to budget effectively, bid competitively, and reduce the risk of costly oversights or underestimations in your projects."
+    },
+    {
+        "question": "How Accurate Are Your Estimates And Takeoffs?",
+        "answer": "Our estimates and takeoffs are highly accurate, thanks to our experienced team of estimators and advanced software tools. We continuously update our databases to reflect current market conditions, ensuring reliable and precise estimates."
+    },
+    {
+        "question": "Do You Provide Support After Delivering The Estimate?",
+        "answer": "Yes, we offer post-estimate support to address any questions or revisions you may have. Our goal is to ensure that you are fully confident and prepared to use the estimate for your bidding and construction planning."
+    },
+    {
+        "question": "Can You Handle Urgent Estimating Requests?",
+        "answer": "We understand the dynamic nature of the construction industry and can accommodate urgent estimating requests depending on our current workload. Please contact us to discuss your specific timeline needs, and we will do our best to meet them."
+    },
+    {
+        "question": "How Do You Ensure The Confidentiality And Security Of Our Project Information?",
+        "answer": "We take confidentiality and security seriously, employing strict data protection protocols and non-disclosure agreements to safeguard all client information and project details."
+    }
+]
+
 import Footer from "./footer";
 
 const services = [
@@ -310,6 +337,68 @@ export default function Component() {
                 </section>
                 <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800">
                     <Testimonials />
+                </section>
+                <section className="w-full py-12 md:py-24 lg:py-32">
+                    <div className="container px-4 md:px-6">
+                        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
+                            <div>
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                                    Estimating and Takeoff Services
+                                </h2>
+                                <p className="mt-4 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                    Master Estimators Ltd. provides comprehensive estimating and takeoff services to construction projects of
+                                    all sizes and complexities. Our team of experienced professionals specializes in delivering accurate and
+                                    reliable cost estimates and detailed material takeoffs to help our clients make informed decisions and
+                                    ensure the success of their projects.
+                                </p>
+                            </div>
+                            <div className="grid gap-6">
+                                <Accordion className="w-full" collapsible type="single">
+                                    <AccordionItem value="project-specialties">
+                                        <AccordionTrigger className="text-xl font-bold">Project Specialties</AccordionTrigger>
+                                        <AccordionContent>
+                                            <p className="mt-2 text-gray-500 md:text-base/relaxed lg:text-sm/relaxed xl:text-base/relaxed dark:text-gray-400">
+                                                We have expertise in a wide range of construction projects, including commercial, residential,
+                                                industrial, and infrastructure developments. Our services cover all trades, from general contracting
+                                                to specialized subcontractors.
+                                            </p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                    <AccordionItem value="benefits">
+                                        <AccordionTrigger className="text-xl font-bold">Benefits of Our Services</AccordionTrigger>
+                                        <AccordionContent>
+                                            <p className="mt-2 text-gray-500 md:text-base/relaxed lg:text-sm/relaxed xl:text-base/relaxed dark:text-gray-400">
+                                                Our estimating and takeoff services help construction projects by providing accurate cost
+                                                projections, identifying potential cost savings, and ensuring the timely procurement of materials.
+                                                This leads to more efficient project planning, reduced risk, and better overall outcomes.
+                                            </p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                    <AccordionItem value="accuracy">
+                                        <AccordionTrigger className="text-xl font-bold">Accuracy and Reliability</AccordionTrigger>
+                                        <AccordionContent>
+                                            <p className="mt-2 text-gray-500 md:text-base/relaxed lg:text-sm/relaxed xl:text-base/relaxed dark:text-gray-400">
+                                                At Master Estimators Ltd., we pride ourselves on the accuracy and reliability of our estimates and
+                                                takeoffs. Our team uses the latest technology and industry-leading practices to ensure that our
+                                                clients receive the most precise and up-to-date information, minimizing the risk of cost overruns
+                                                and delays.
+                                            </p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                    <AccordionItem value="post-estimate">
+                                        <AccordionTrigger className="text-xl font-bold">Post-Estimate Support</AccordionTrigger>
+                                        <AccordionContent>
+                                            <p className="mt-2 text-gray-500 md:text-base/relaxed lg:text-sm/relaxed xl:text-base/relaxed dark:text-gray-400">
+                                                Our commitment to our clients doesn't end with the delivery of the estimate or takeoff. We provide
+                                                ongoing support throughout the project, including change order management, budget tracking, and
+                                                value engineering assistance, to help ensure the successful completion of the construction project.
+                                            </p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                </Accordion>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <Footer />
