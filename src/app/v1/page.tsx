@@ -1,10 +1,11 @@
 'use client'
 import Link from "next/link";
 import { CardContent, Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu";
 import ContactForm from "@/components/contact-form";
 import Testimonials from "./testimonials.component";
-import { Clock, Calculator, Target, Headphones, MessageCircle } from 'lucide-react';
+import { Mail, Phone, X, Menu, Clock, Calculator, Target, Headphones, MessageCircle } from 'lucide-react';
+import { useState } from "react";
+import Navbar from "./navbar";
 
 const services = [
     {
@@ -135,49 +136,10 @@ const services = [
 ];
 
 export default function Component() {
+
     return (
         <div className="flex flex-col min-h-screen">
-            <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-white px-4 py-5 shadow-sm dark:bg-gray-950 md:px-6">
-                <div className="container mx-auto px-4 md:px-6">
-                    <h1 className="text-2xl font-bold tracking-tight text-black sm:text-5xl md:text-6xl lg:text-7xl">Take Offer</h1>
-                </div>
-                <nav className="ml-auto flex gap-4 sm:gap-6">
-                    <DropdownMenu>
-                        <DropdownMenuTrigger className="flex items-center gap-1 hover:underline text-2xl">
-                            Takeoffs
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end" className="w-[300px] max-h-[400px] overflow-y-auto">
-                            <DropdownMenuLabel className="px-4 py-2 text-sm font-medium">Takeoff Services</DropdownMenuLabel>
-                            <DropdownMenuSeparator />
-                            {services.map((service, index) => (
-                                <DropdownMenuItem key={index}>
-                                    <Link
-                                        className="flex items-center justify-between w-full px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
-                                        href="#"
-                                    >
-                                        <span>{service.title}</span>
-                                    </Link>
-                                </DropdownMenuItem>
-                            ))}
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-                    <Link className="flex items-center gap-1 hover:underline" href="#services">
-                        Services
-                    </Link>
-                    <Link className="flex items-center gap-1 hover:underline" href="#testimonials">
-                        Testimonials
-                    </Link>
-                    <Link className="flex items-center gap-1 hover:underline" href="#contact">
-                        Contact
-                    </Link>
-                    <Link
-                        className="inline-flex h-10 items-center justify-center rounded-md bg-sky-300 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-yellow-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-yellow-400 dark:text-gray-900 dark:hover:bg-yellow-500 dark:focus-visible:ring-gray-300"
-                        href="#contact"
-                    >
-                        Get Started
-                    </Link>
-                </nav>
-            </header>
+            <Navbar />
             <main className="flex-1">
                 <section
                     className="w-full py-6 sm:py-12 md:py-24 lg:py-32 xl:py-48 bg-cover bg-center bg-no-repeat"
@@ -213,57 +175,64 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-                <section className="flex justify-center mt-20">
-                    <div className="flex justify-center space-x-6 ">
-                        <div className="flex flex-col items-center">
-                            <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-50">10,000+</h3>
-                            <p className="text-gray-600 dark:text-black">Estimates Done</p>
-                            <Calculator className="text-xl text-gray-800 dark:text-gray-50" />
+                <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+                    <div className="container">
+                        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+                            <div className="space-y-4">
+                                <div className="space-y-2">
+                                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                                        Construction Estimation and Material Takeoff
+                                    </h2>
+                                    <p className="text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                        TakeOffer provides high-quality and competitively priced construction estimation and material takeoff
+                                        services. Our team of experienced professionals ensures accurate and detailed reports to help you plan
+                                        your projects effectively.
+                                    </p>
+                                </div>
+                                <div className="grid gap-4">
+                                    <div className="flex items-center gap-4">
+                                        <Mail className="h-6 w-6 text-gray-500 dark:text-gray-400" />
+                                        <div>
+                                            <div className="font-medium">Email</div>
+                                            <a className="text-gray-500 hover:underline dark:text-gray-400" href="#">
+                                                contact@takeoffer.net
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Phone className="h-6 w-6 text-gray-500 dark:text-gray-400" />
+                                        <div>
+                                            <div className="font-medium">Phone</div>
+                                            <a className="text-gray-500 hover:underline dark:text-gray-400" href="#">
+                                                +1 (815) 995-8820
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <Clock className="h-6 w-6 text-gray-500 dark:text-gray-400" />
+                                        <div>
+                                            <div className="font-medium">Working Hours</div>
+                                            <p className="text-gray-500 dark:text-gray-400">24/7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex items-center justify-center">
+                                <div className="flex min-[400px]:flex-row justify-center">
+                                    <Card className="w-full w-3/4">
+                                        <CardHeader>
+                                            <CardTitle>Contact Form</CardTitle>
+                                            <CardDescription>
+                                                Want estimates or have any questions? Fill out the form and our team will get back to you.
+                                            </CardDescription>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <ContactForm />
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </div>
                         </div>
-                        <div className="hidden md:block self-center w-px h-12 bg-gray-200 dark:bg-gray-700"></div> {/* Bar Divider */}
-
-                        <div className="flex flex-col items-center">
-                            <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-50">15+ Years</h3>
-                            <p className="text-gray-600 dark:text-gray-600">Experience</p>
-                            <Clock className="text-xl text-gray-800 dark:text-gray-50" />
-                        </div>
-                        <div className="hidden md:block self-center w-px h-12 bg-gray-200 dark:bg-gray-700"></div> {/* Bar Divider */}
-
-                        <div className="flex flex-col items-center">
-                            <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-50">Precise</h3>
-                            <p className="text-gray-600 dark:text-gray-600">Accuracy</p>
-                            <Target className="text-xl text-gray-800 dark:text-gray-50" />
-                        </div>
-                        <div className="hidden md:block self-center w-px h-12 bg-gray-200 dark:bg-gray-700"></div> {/* Bar Divider */}
-
-                        <div className="flex flex-col items-center">
-                            <h3 className="text-3xl font-bold text-gray-800">Fast</h3>
-                            <p className="text-gray-600 dark:text-gray-600">Responses</p>
-                            <MessageCircle className="text-xl text-gray-800 dark:text-gray-50" />
-                        </div>
-                        <div className="hidden md:block self-center w-px h-12 bg-gray-200 dark:bg-gray-700"></div> {/* Bar Divider */}
-
-                        <div className="flex flex-col items-center">
-                            <h3 className="text-3xl font-bold text-gray-800">24/7</h3>
-                            <p className="text-gray-600 dark:text-gray-600">Support</p>
-                            <Headphones className="text-xl text-gray-800 dark:text-gray-50" />
-                        </div>
-
-                    </div>
-                </section>
-                <section id="contact" className="w-full py-6 md:py-12 lg:py-16">
-                    <div className="flex min-[400px]:flex-row justify-center">
-                        <Card className="w-full w-3/4">
-                            <CardHeader>
-                                <CardTitle>Contact Form</CardTitle>
-                                <CardDescription>
-                                    Want estimates or have any questions? Fill out the form and our team will get back to you.
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <ContactForm />
-                            </CardContent>
-                        </Card>
                     </div>
                 </section>
                 <section id="services" className="flex justify-center w-full py-6 md:py-12 lg:py-16">
@@ -293,16 +262,63 @@ export default function Component() {
                     <Testimonials />
                 </section>
             </main>
-            <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-                <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 TakeOffer. All rights reserved.</p>
-                <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-                    <Link className="text-xs hover:underline underline-offset-4" href="#">
-                        Terms of Service
-                    </Link>
-                    <Link className="text-xs hover:underline underline-offset-4" href="#">
-                        Privacy
-                    </Link>
-                </nav>
+            <footer className="bg-gray-900 text-gray-200 py-12 md:py-16 lg:py-20">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="space-y-4">
+                        <div className="flex items-center space-x-2">
+                            <span className="text-xl font-bold">TakeOffer</span>
+                        </div>
+                        <p className="text-gray-400 text-sm">Empowering businesses to make informed decisions.</p>
+                    </div>
+                    <div className="space-y-2">
+                        <h4 className="text-lg font-semibold">Services</h4>
+                        <ul className="space-y-1">
+                            <li>
+                                <Link className="hover:text-gray-300 transition-colors" href="#">
+                                    Market Analysis
+                                </Link>
+                            </li>
+                            <li>
+                                <Link className="hover:text-gray-300 transition-colors" href="#">
+                                    Competitive Intelligence
+                                </Link>
+                            </li>
+                            <li>
+                                <Link className="hover:text-gray-300 transition-colors" href="#">
+                                    Pricing Optimization
+                                </Link>
+                            </li>
+                            <li>
+                                <Link className="hover:text-gray-300 transition-colors" href="#">
+                                    Sales Enablement
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="space-y-2">
+                        <h4 className="text-lg font-semibold">Contact</h4>
+                        <div className="space-y-1">
+                            <div className="flex items-center space-x-2">
+                                <Phone className="h-5 w-5" />
+                                <span>+1 (815) 995-8820</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Mail className="h-5 w-5" />
+                                <span>contact@takeoffer.net</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="space-y-2">
+                        <h4 className="text-lg font-semibold">Legal</h4>
+                        <ul className="space-y-1">
+                            <li>
+                                <Link className="hover:text-gray-300 transition-colors" href="#">
+                                    Privacy Policy
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </footer>
         </div >
     );

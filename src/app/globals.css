@@ -66,6 +66,24 @@
   }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .dropdown-menu {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 @layer base {
   * {
     @apply border-border;

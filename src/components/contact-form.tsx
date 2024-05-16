@@ -100,7 +100,7 @@ export default function ContactForm() {
                 <Textarea placeholder="Type your message" name="message" />
                 {/* {formErrors.message && <span>{formErrors.message[0]}</span>} */}
             </div>
-            <Button className="bg-radius-md text-green-800 text-lg bg-green-200 hover:bg-green-400" type="submit"> <SendHorizontal className="text-xl text-gray-800 dark:text-gray-50" /></Button>
+            <Button className="bg-radius-md text-black text-lg bg-blue-300 hover:bg-blue-400" type="submit"> <SendHorizontal className="text-xl text-gray-800 dark:text-gray-50" /></Button>
         </form>
     );
 }
