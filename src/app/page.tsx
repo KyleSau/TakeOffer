@@ -191,31 +191,31 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-                <section className="container mx-auto py-6 md:py-12 lg:py-16 dark:bg-gray-800">
+                <section className="container mx-auto py-6 dark:bg-gray-800">
                     <div className="flex flex-col items-center mb-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            <div className="col-span-1  flex flex-col items-center justify-center">
+                            <div className="col-span-1 flex flex-col items-center justify-center h-full">
                                 <CircleDollarSign className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
                                 <h1 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">Competitive Pricing</h1>
                                 <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5">
                                     Experience the edge of competitive pricing with our construction estimate services, boasting an unparalleled 99% accuracy rate. Bid confidently with tailored project costs that eliminate overruns, ensuring a balanced budget every time.
                                 </p>
                             </div>
-                            <div className="col-span-1 flex flex-col items-center justify-center">
+                            <div className="col-span-1 flex flex-col items-center justify-center h-full">
                                 <CircleCheckBig className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
                                 <h1 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">Cost-Effective</h1>
                                 <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5">
                                     Unlock cost-effective outsourcing solutions tailored to your needs. Say goodbye to full-time estimator expenses and hello to affordable, top-quality takeoffs. Pay only for the hours you require, maximizing your budget without compromising on excellence.
                                 </p>
                             </div>
-                            <div className="col-span-1 flex flex-col items-center justify-center">
+                            <div className="col-span-1 flex flex-col items-center justify-center h-full">
                                 <Clock className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
                                 <h1 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">Fast Turnaround Time</h1>
                                 <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5">
                                     Speed is the name of the game with our fast turnaround times. Get estimates and takeoffs promptly to stay ahead of the curve in the market. Effortlessly meet your deadlines and secure lucrative opportunities with ease.
                                 </p>
                             </div>
-                            <div className="col-span-1 flex flex-col items-center justify-center">
+                            <div className="col-span-1 flex flex-col items-center justify-center h-full">
                                 <LineChart className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
                                 <h1 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">Efficiency and Growth</h1>
                                 <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5">
@@ -225,7 +225,34 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-
+                <section className="container dark:bg-gray-800">
+                    <div className="flex flex-col items-center mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+                            <div className="col-span-1 flex flex-col items-center justify-center relative">
+                                <h2 className="text-6xl font-bold m-10">Our Service Process</h2>
+                                <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">1. Submit Your Floor Plans</h3>
+                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
+                                    Please submit your drawings and specifications to us by attaching your documents through our contact form or by sending them directly to <Link href="mailto:contact@takeoffer.net" className="font-bold text-lg underline">contact@takeoffer.net</Link> We accept documents in PDF format for your convenience. If you have any inquiries or need assistance, feel free to reach out at any time. Our team is always ready to support you.
+                                </p>
+                                <a href="#" className="text-blue-600 hover:underline">Upload Drawing Plans ⟶</a>
+                                <div className="line top-0 bottom-0 left-1/2 bg-gray-300 dark:bg-gray-500" style={{ width: '2px' }}></div>
+                            </div>
+                            <div className="col-span-1 flex flex-col items-center justify-center relative">
+                                <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">2. Get Your Project Quote</h3>
+                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
+                                    After we look at your plans, we’ll quickly send you a free quote for estimation services and material takeoffs. If you say yes to our quote, we’ll start working on your project right away, making sure it fits your schedule and what you need. Then, we’ll get your project’s material takeoff ready for you.
+                                </p>
+                                <div className="line top-0 bottom-0 left-1/2 bg-gray-300 dark:bg-gray-500" style={{ width: '2px' }}></div>
+                            </div>
+                            <div className="col-span-1 flex flex-col items-center justify-center relative">
+                                <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">3. Receive Your Estimate</h3>
+                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
+                                    You’ll get an estimate from us with all the details and estimates your project needs. If you have questions at any point, our team is here to help you out.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
                     <div className="container">
                         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
