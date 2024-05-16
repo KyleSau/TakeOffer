@@ -169,25 +169,29 @@ export default function Component() {
                         <div className="grid grid-cols-4 gap-8">
                             <div className="col-span-1  flex flex-col items-center justify-center">
                                 <CircleDollarSign className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
-                                <p className="text-lg text-gray-700 dark:text-gray-300 bg-gray-200 p-5 h-full">
+                                <h1 className="text-2xl font-bold">Competetive Pricing</h1>
+                                <p className="text-lg text-gray-700 dark:text-gray-300 p-5 h-full">
                                     Experience the edge of competitive pricing with our construction estimate services, boasting an unparalleled 99% accuracy rate. Bid confidently with tailored project costs that eliminate overruns, ensuring a balanced budget every time.
                                 </p>
                             </div>
                             <div className="col-span-1 flex flex-col items-center justify-center">
                                 <Check className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
-                                <p className="text-lg text-gray-700 bg-gray-200 p-5 dark:text-gray-300 h-full">
+                                <h1 className="text-2xl font-bold">Cost-Effective Outsourcing</h1>
+                                <p className="text-lg text-gray-700 p-5 dark:text-gray-300 h-full">
                                     Unlock cost-effective outsourcing solutions tailored to your needs. Say goodbye to full-time estimator expenses and hello to affordable, top-quality takeoffs. Pay only for the hours you require, maximizing your budget without compromising on excellence.
                                 </p>
                             </div>
                             <div className="col-span-1 flex flex-col items-center justify-center">
                                 <Clock className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
-                                <p className="text-lg text-gray-700 bg-gray-200 p-5 dark:text-gray-300 h-full">
+                                <h1 className="text-2xl font-bold">Fast Turnaround Time</h1>
+                                <p className="text-lg text-gray-700 p-5 dark:text-gray-300 h-full">
                                     Speed is the name of the game with our fast turnaround times. Get estimates and takeoffs promptly to stay ahead of the curve in the market. Effortlessly meet your deadlines and secure lucrative opportunities with ease.
                                 </p>
                             </div>
                             <div className="col-span-1 flex flex-col items-center justify-center">
                                 <LineChart className="h-12 w-12 text-black dark:text-gray-400 mb-4" />
-                                <p className="text-lg bg-gray-200 p-5 text-gray-700 dark:text-gray-300 h-full">
+                                <h1 className="text-2xl font-bold">Efficiency and Growth</h1>
+                                <p className="text-lg p-5 text-gray-700 dark:text-gray-300 h-full">
                                     Efficiency fuels growth, and our services are your ticket to both. Streamline operations and pave the way for expansion by outsourcing your estimates to us. Free up valuable resources for bigger bids and watch your business soar.
                                 </p>
                             </div>
