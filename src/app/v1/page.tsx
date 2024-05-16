@@ -6,6 +6,7 @@ import Testimonials from "./testimonials.component";
 import { Mail, Phone, X, Menu, Clock, Calculator, Target, Headphones, MessageCircle } from 'lucide-react';
 import { useState } from "react";
 import Navbar from "./navbar";
+import Head from 'next/head'
 
 const services = [
     {
@@ -31,7 +32,7 @@ const services = [
     {
         title: "EIFS Takeoff",
         description: "Quantify the materials for insulation and finish systems, key for thermal efficiency and aesthetics in construction.",
-        image: "path_to_image/eifs.jpg",
+        image: "eifs.jpg",
     },
     {
         title: "Electrical Estimating Services",
@@ -51,7 +52,7 @@ const services = [
     {
         title: "Insulation Estimating Services",
         description: "Calculates the amount of insulation material needed for a project, including type, thickness, and area coverage.",
-        image: "path_to_image/insulation.jpg",
+        image: "insulation.jpg",
     },
     {
         title: "Landscaping Estimating Services",
@@ -61,7 +62,7 @@ const services = [
     {
         title: "Lumber Takeoff",
         description: "The quantities and types of lumber required for construction projects, ensuring precise material procurement.",
-        image: "path_to_image/lumber.jpg",
+        image: "lumber.jpg",
     },
     {
         title: "Masonry Estimating Services",
@@ -71,12 +72,12 @@ const services = [
     {
         title: "Metal Framing Takeoff",
         description: "The quantities and specifications of metal studs, tracks, fasteners, and other components required for framing construction projects.",
-        image: "path_to_image/metal_framing.jpg",
+        image: "metalframing.jpg",
     },
     {
         title: "Millwork Estimating Services",
         description: "The types and quantities of custom-made architectural woodwork and cabinetry, required for construction projects.",
-        image: "path_to_image/millwork.jpg",
+        image: "millwork.jpg",
     },
     {
         title: "Painting Takeoff",
@@ -89,9 +90,9 @@ const services = [
         image: "plumbing.jpeg",
     },
     {
-        title: "Reinforcing Steel Takeoff",
+        title: "Rebar Takeoff",
         description: "The quantities and specifications of reinforcing bars (rebar) required.",
-        image: "path_to_image/reinforcing_steel.jpg",
+        image: "rebar.jpg",
     },
     {
         title: "Roofing Estimating Services",
@@ -101,38 +102,33 @@ const services = [
     {
         title: "Siding Takeoff",
         description: "The specifications and quantities of siding materials, such as vinyl, wood, fiber cement, or metal panels.",
-        image: "path_to_image/siding.jpg",
+        image: "siding.jpg",
     },
     {
         title: "Site Work Takeoff",
         description: "The quantities of all materials, labor, and equipment needed for site preparation and development. Earthwork / Excavation.",
-        image: "path_to_image/site_work.jpg",
+        image: "excavating.jpeg",
     },
     {
         title: "Steel Framing Takeoff",
         description: "The quantities and specifications of steel framing materials, including beams, columns, studs, and joists.",
-        image: "path_to_image/steel_framing.jpg",
+        image: "steel-framing.jpg",
     },
     {
         title: "Stucco Takeoff",
         description: "The specifications and quantities of stucco materials, such as cement, sand, lime, and additives.",
-        image: "path_to_image/stucco.jpg",
+        image: "stucco.jpg",
     },
     {
         title: "Tenant Improvement Takeoff",
         description: "The quantities and costs of all materials, labor, and equipment for renovating or customizing commercial spaces.",
-        image: "path_to_image/tenant_improvement.jpg",
+        image: "tenant-improvement.jpg",
     },
     {
         title: "Tile Takeoff",
         description: "The quantities and specifications of tile materials, including ceramic, porcelain, glass, or stone tiles.",
-        image: "path_to_image/tile.jpg",
+        image: "tile.webp",
     },
-    {
-        title: "Wallcovering Takeoff",
-        description: "The specifications and quantities of materials, such as wallpaper, paint, fabric, or decorative panels, required for interior or exterior walls.",
-        image: "path_to_image/wallcovering.jpg",
-    }
 ];
 
 export default function Component() {
@@ -258,7 +254,7 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-                <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-sky-600 dark:bg-gray-800">
+                <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800">
                     <Testimonials />
                 </section>
             </main>
