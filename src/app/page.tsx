@@ -229,12 +229,12 @@ export default function Component() {
                     <div className="flex flex-col items-center mb-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
                             <div className="col-span-1 flex flex-col items-center justify-center relative">
-                                <h2 className="text-6xl font-bold m-10">Our Service Process</h2>
+                                <h2 className="text-3xl text-gray-500 font-bold m-10">Our Service Process</h2>
                                 <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">1. Submit Your Floor Plans</h3>
                                 <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
                                     Please submit your drawings and specifications to us by attaching your documents through our contact form or by sending them directly to <Link href="mailto:contact@takeoffer.net" className="font-bold text-lg underline">contact@takeoffer.net</Link> We accept documents in PDF format for your convenience. If you have any inquiries or need assistance, feel free to reach out at any time. Our team is always ready to support you.
                                 </p>
-                                <a href="#" className="text-blue-600 hover:underline">Upload Drawing Plans ⟶</a>
+                                <a href="#contact" className="text-blue-600 hover:underline">Upload Drawing Plans ⟶</a>
                                 <div className="line top-0 bottom-0 left-1/2 bg-gray-300 dark:bg-gray-500" style={{ width: '2px' }}></div>
                             </div>
                             <div className="col-span-1 flex flex-col items-center justify-center relative">
@@ -341,64 +341,33 @@ export default function Component() {
                 </section>
                 <section className="w-full py-12 md:py-24 lg:py-32">
                     <div className="container px-4 md:px-6">
-                        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-                            <div>
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                                    Estimating and Takeoff Services
-                                </h2>
-                                <p className="mt-4 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                                    Master Estimators Ltd. provides comprehensive estimating and takeoff services to construction projects of
-                                    all sizes and complexities. Our team of experienced professionals specializes in delivering accurate and
-                                    reliable cost estimates and detailed material takeoffs to help our clients make informed decisions and
-                                    ensure the success of their projects.
-                                </p>
-                            </div>
-                            <div className="grid gap-6">
+                        {/* <div className="grid gap-6 lg:grid-cols-2 lg:gap-12"> */}
+                        <div>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                                Estimating and Takeoff Services
+                            </h2>
+                            <p className="mt-4 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                TakeOffer provides comprehensive estimating and takeoff services to construction projects of
+                                all sizes and complexities. Our team of experienced professionals specializes in delivering accurate and
+                                reliable cost estimates and detailed material takeoffs to help our clients make informed decisions and
+                                ensure the success of their projects.
+                            </p>
+                        </div>
+                        <div className="grid gap-6 py-12">
+                            {faqData.map((faq, index) => (
                                 <Accordion className="w-full" collapsible type="single">
                                     <AccordionItem value="project-specialties">
-                                        <AccordionTrigger className="text-xl font-bold">Project Specialties</AccordionTrigger>
+                                        <AccordionTrigger key={index} className="text-xl font-bold">{faq.question}</AccordionTrigger>
                                         <AccordionContent>
                                             <p className="mt-2 text-gray-500 md:text-base/relaxed lg:text-sm/relaxed xl:text-base/relaxed dark:text-gray-400">
-                                                We have expertise in a wide range of construction projects, including commercial, residential,
-                                                industrial, and infrastructure developments. Our services cover all trades, from general contracting
-                                                to specialized subcontractors.
-                                            </p>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                    <AccordionItem value="benefits">
-                                        <AccordionTrigger className="text-xl font-bold">Benefits of Our Services</AccordionTrigger>
-                                        <AccordionContent>
-                                            <p className="mt-2 text-gray-500 md:text-base/relaxed lg:text-sm/relaxed xl:text-base/relaxed dark:text-gray-400">
-                                                Our estimating and takeoff services help construction projects by providing accurate cost
-                                                projections, identifying potential cost savings, and ensuring the timely procurement of materials.
-                                                This leads to more efficient project planning, reduced risk, and better overall outcomes.
-                                            </p>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                    <AccordionItem value="accuracy">
-                                        <AccordionTrigger className="text-xl font-bold">Accuracy and Reliability</AccordionTrigger>
-                                        <AccordionContent>
-                                            <p className="mt-2 text-gray-500 md:text-base/relaxed lg:text-sm/relaxed xl:text-base/relaxed dark:text-gray-400">
-                                                At Master Estimators Ltd., we pride ourselves on the accuracy and reliability of our estimates and
-                                                takeoffs. Our team uses the latest technology and industry-leading practices to ensure that our
-                                                clients receive the most precise and up-to-date information, minimizing the risk of cost overruns
-                                                and delays.
-                                            </p>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                    <AccordionItem value="post-estimate">
-                                        <AccordionTrigger className="text-xl font-bold">Post-Estimate Support</AccordionTrigger>
-                                        <AccordionContent>
-                                            <p className="mt-2 text-gray-500 md:text-base/relaxed lg:text-sm/relaxed xl:text-base/relaxed dark:text-gray-400">
-                                                Our commitment to our clients doesn't end with the delivery of the estimate or takeoff. We provide
-                                                ongoing support throughout the project, including change order management, budget tracking, and
-                                                value engineering assistance, to help ensure the successful completion of the construction project.
+                                                {faq.answer}
                                             </p>
                                         </AccordionContent>
                                     </AccordionItem>
                                 </Accordion>
-                            </div>
+                            ))}
                         </div>
+                        {/* </div> */}
                     </div>
                 </section>
             </main>
