@@ -95,7 +95,7 @@ const services = [
     {
         title: "Roofing Estimating Services",
         description: "The quantities and specifications of roofing materials, such as shingles, tiles, underlayment, flashing, and nails.",
-        image: "path_to_image/roofing.jpg",
+        image: "roofing.jpeg",
     },
     {
         title: "Siding Takeoff",
