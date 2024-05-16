@@ -7,6 +7,7 @@ import { Mail, Phone, X, Menu, Clock, Calculator, Target, Headphones, MessageCir
 import { useState } from "react";
 import Navbar from "./navbar";
 import Head from 'next/head'
+import Footer from "./footer";
 
 const services = [
     {
@@ -198,8 +199,8 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-                <section className="container dark:bg-gray-800">
-                    <div className="flex flex-col items-center mb-8">
+                <section className="container bg-gray-100 w-full py-5">
+                    <div className="flex flex-col items-center">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
                             <div className="col-span-1 flex flex-col items-center justify-center relative">
                                 <h2 className="text-6xl font-bold m-10">Our Service Process</h2>
@@ -208,14 +209,12 @@ export default function Component() {
                                     Please submit your drawings and specifications to us by attaching your documents through our contact form or by sending them directly to <Link href="mailto:contact@takeoffer.net" className="font-bold text-lg underline">contact@takeoffer.net</Link> We accept documents in PDF format for your convenience. If you have any inquiries or need assistance, feel free to reach out at any time. Our team is always ready to support you.
                                 </p>
                                 <a href="#" className="text-blue-600 hover:underline">Upload Drawing Plans ⟶</a>
-                                <div className="line top-0 bottom-0 left-1/2 bg-gray-300 dark:bg-gray-500" style={{ width: '2px' }}></div>
                             </div>
                             <div className="col-span-1 flex flex-col items-center justify-center relative">
                                 <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">2. Get Your Project Quote</h3>
                                 <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
                                     After we look at your plans, we’ll quickly send you a free quote for estimation services and material takeoffs. If you say yes to our quote, we’ll start working on your project right away, making sure it fits your schedule and what you need. Then, we’ll get your project’s material takeoff ready for you.
                                 </p>
-                                <div className="line top-0 bottom-0 left-1/2 bg-gray-300 dark:bg-gray-500" style={{ width: '2px' }}></div>
                             </div>
                             <div className="col-span-1 flex flex-col items-center justify-center relative">
                                 <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">3. Receive Your Estimate</h3>
@@ -226,7 +225,7 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-                <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+                <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-white">
                     <div className="container">
                         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
                             <div className="space-y-4">
@@ -313,69 +312,7 @@ export default function Component() {
                     <Testimonials />
                 </section>
             </main>
-            <footer className="bg-gray-900 text-gray-200 py-12 md:py-16 lg:py-20">
-                <div className="container mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div className="space-y-4">
-                        <div className="flex items-center space-x-2">
-                            <span className="text-xl font-bold">TakeOffer</span>
-                        </div>
-                        <p className="text-gray-400 text-sm">Empowering businesses to make informed decisions.</p>
-                    </div>
-                    <div className="space-y-2">
-                        <h4 className="text-lg font-semibold">Services</h4>
-                        <ul className="space-y-1">
-                            <li>
-                                <Link className="hover:text-gray-300 transition-colors" href="#">
-                                    Market Analysis
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className="hover:text-gray-300 transition-colors" href="#">
-                                    Competitive Intelligence
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className="hover:text-gray-300 transition-colors" href="#">
-                                    Pricing Optimization
-                                </Link>
-                            </li>
-                            <li>
-                                <Link className="hover:text-gray-300 transition-colors" href="#">
-                                    Sales Enablement
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="space-y-2">
-                        <h4 className="text-lg font-semibold">Contact</h4>
-                        <div className="space-y-1">
-                            <div className="flex items-center space-x-2">
-                                <Phone className="h-5 w-5" />
-                                <a className="text-gray-500 hover:underline dark:text-gray-400" href="tel:+18159958820">
-                                    +1 (815) 995-8820
-                                </a>
-
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <Mail className="h-5 w-5" />
-                                <a className="text-gray-500 hover:underline dark:text-gray-400" href="mailto:contact@takeoffer.net">
-                                    contact@takeoffer.net
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="space-y-2">
-                        <h4 className="text-lg font-semibold">Legal</h4>
-                        <ul className="space-y-1">
-                            <li>
-                                <Link className="hover:text-gray-300 transition-colors" href="#">
-                                    Privacy Policy
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div >
     );
 }
