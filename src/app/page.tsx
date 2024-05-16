@@ -10,21 +10,6 @@ import ContactForm from "@/components/contact-form"
 
 const services = [
   {
-    title: "Cabinet Takeoff",
-    description: "Unlock precision in cabinetry takeoffs, tailored to fit your project&apos;s exact needs with unparalleled accuracy.",
-    image: "path_to_image/cabinet.jpg",
-  },
-  {
-    title: "Civil Takeoff",
-    description: "A comprehensive analysis and quantification of all materials and work required for civil engineering and infrastructure projects.",
-    image: "path_to_image/civil.jpg",
-  },
-  {
-    title: "Cladding Takeoff",
-    description: "A detailed measurement and quantification of materials required for the exterior covering or facade of buildings and structures.",
-    image: "path_to_image/cladding.jpg",
-  },
-  {
     title: "Commercial Estimating",
     description: "Materials, labor, and equipment for commercial building projects, essential for accurate budgeting, scheduling, and procurement.",
     image: "path_to_image/commercial.jpg",
@@ -45,11 +30,6 @@ const services = [
     image: "path_to_image/drywall.jpg",
   },
   {
-    title: "EIFS Takeoff",
-    description: "Quantify the materials for insulation and finish systems, key for thermal efficiency and aesthetics in construction.",
-    image: "path_to_image/eifs.jpg",
-  },
-  {
     title: "Electrical Estimating Services",
     description: "All lighting fixtures, switches, outlets, and other electrical components required for a construction project.",
     image: "path_to_image/electrical.jpg",
@@ -65,24 +45,9 @@ const services = [
     image: "path_to_image/framing.jpg",
   },
   {
-    title: "Home Renovation Takeoff",
-    description: "Quantifies materials, fixtures, and finishes for home updates, covering structural, electrical, and plumbing.",
-    image: "path_to_image/home_renovation.jpg",
-  },
-  {
-    title: "HVAC Takeoff",
-    description: "The quantities and types of heating, ventilation, and air conditioning units and materials needed for a project.",
-    image: "path_to_image/hvac.jpg",
-  },
-  {
     title: "Insulation Estimating Services",
     description: "Calculates the amount of insulation material needed for a project, including type, thickness, and area coverage.",
     image: "path_to_image/insulation.jpg",
-  },
-  {
-    title: "Landscaping Estimating Services",
-    description: "We calculate the quantities and types of materials needed for your landscaping projects.",
-    image: "path_to_image/landscaping.jpg",
   },
   {
     title: "Lumber Takeoff",
@@ -95,16 +60,6 @@ const services = [
     image: "path_to_image/masonry.jpg",
   },
   {
-    title: "Metal Framing Takeoff",
-    description: "The quantities and specifications of metal studs, tracks, fasteners, and other components required for framing construction projects.",
-    image: "path_to_image/metal_framing.jpg",
-  },
-  {
-    title: "Millwork Estimating Services",
-    description: "The types and quantities of custom-made architectural woodwork and cabinetry, required for construction projects.",
-    image: "path_to_image/millwork.jpg",
-  },
-  {
     title: "Painting Takeoff",
     description: "It methodically assesses the area to be painted, calculates the types and quantities of paint, primer, and other materials needed.",
     image: "path_to_image/painting.jpg",
@@ -115,21 +70,6 @@ const services = [
     image: "path_to_image/plumbing.jpg",
   },
   {
-    title: "Precast Takeoff",
-    description: "The specifications and quantities of precast concrete elements required for projects.",
-    image: "path_to_image/precast.jpg",
-  },
-  {
-    title: "Reinforcing Steel Takeoff",
-    description: "The quantities and specifications of reinforcing bars (rebar) required.",
-    image: "path_to_image/reinforcing_steel.jpg",
-  },
-  {
-    title: "Residential Estimating",
-    description: "The quantities and costs of all materials, labor, and equipment needed for residential projects.",
-    image: "path_to_image/residential.jpg",
-  },
-  {
     title: "Roofing Estimating Services",
     description: "The quantities and specifications of roofing materials, such as shingles, tiles, underlayment, flashing, and nails.",
     image: "path_to_image/roofing.jpg",
@@ -138,21 +78,6 @@ const services = [
     title: "Siding Takeoff",
     description: "The specifications and quantities of siding materials, such as vinyl, wood, fiber cement, or metal panels.",
     image: "path_to_image/siding.jpg",
-  },
-  {
-    title: "Site Work Takeoff",
-    description: "The quantities of all materials, labor, and equipment needed for site preparation and development. Earthwork / Excavation.",
-    image: "path_to_image/site_work.jpg",
-  },
-  {
-    title: "Steel Framing Takeoff",
-    description: "The quantities and specifications of steel framing materials, including beams, columns, studs, and joists.",
-    image: "path_to_image/steel_framing.jpg",
-  },
-  {
-    title: "Stucco Takeoff",
-    description: "The specifications and quantities of stucco materials, such as cement, sand, lime, and additives.",
-    image: "path_to_image/stucco.jpg",
   },
   {
     title: "Tenant Improvement Takeoff",
@@ -174,13 +99,16 @@ const services = [
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-white px-4 py-5 shadow-sm dark:bg-gray-950 md:px-6">
+      <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-sky-200 px-4 py-5 shadow-sm dark:bg-gray-950 md:px-6">
         <div className="flex items-center gap-6">
           <Link className="flex items-center gap-2 text-lg font-semibold" href="#">
             <span className="sr-only">Acme Construction</span>
           </Link>
         </div>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
+        <nav className="ml-auto flex gap-4 sm:gap-6 font-bold text-lg">
+          <Link className="" href="#">
+            Take Offer
+          </Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 hover:underline">
               Takeoffs
@@ -201,10 +129,10 @@ export default function Component() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link className="flex items-center gap-1 hover:underline" href="#">
+          <Link className="flex items-center gap-1 hover:underline text-2xl" href="#">
             Services
           </Link>
-          <Link className="flex items-center gap-1 hover:underline" href="#">
+          <Link className="flex items-center gap-1 hover:underline text-4xl" href="#">
             Testimonials
           </Link>
           <Link className="flex items-center gap-1 hover:underline" href="#">
@@ -270,7 +198,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
           <div className="flex min-[400px]:flex-row justify-center">
             <Card className="w-full w-3/4">
               <CardHeader>
@@ -289,9 +217,6 @@ export default function Component() {
         <section className="w-full py-6 md:py-12 lg:py-16">
           <div className="container px-4 md:px-6">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
-                Our Services
-              </div>
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Comprehensive Construction Estimation Services
               </h2>
@@ -317,7 +242,6 @@ export default function Component() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
-                  Testimonials
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Trusted by Industry Leaders</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -325,9 +249,9 @@ export default function Component() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            <div className="mx-auto grid max-w-5xl items-center gap-6 p-12 lg:grid-cols-3 lg:gap-12">
               <Card>
-                <CardContent>
+                <CardContent className="p-5">
                   <blockquote className="text-lg font-semibold leading-snug lg:text-xl lg:leading-normal xl:text-2xl">
                     “The accuracy of the estimations provided by TakeOffer is simply unmatched. It has significantly
                     improved our project planning and budgeting.“
@@ -339,7 +263,7 @@ export default function Component() {
                 </CardContent>
               </Card>
               <Card>
-                <CardContent>
+                <CardContent className="p-5">
                   <blockquote className="text-lg font-semibold leading-snug lg:text-xl lg:leading-normal xl:text-2xl">
                     “TakeOffer&apos;s service has been a game changer for us. It has helped us save time and resources in our
                     construction projects.“
@@ -351,7 +275,7 @@ export default function Component() {
                 </CardContent>
               </Card>
               <Card>
-                <CardContent>
+                <CardContent className="p-5">
                   <blockquote className="text-lg font-semibold leading-snug lg:text-xl lg:leading-normal xl:text-2xl">
                     “We have been using TakeOffer for the past year and it has been a great experience. Their customer
                     support is also excellent.“
@@ -362,44 +286,6 @@ export default function Component() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
-                  Achievements
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Trusted by the Best</h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  We are proud to have worked with some of the top construction companies in the world.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-              <img
-                alt="Logo"
-                className="mx-auto aspect-[2/1] overflow-hidden rounded-lg object-contain object-center sm:w-full lg:order-last"
-                height="70"
-                src="/placeholder.svg"
-                width="140"
-              />
-              <img
-                alt="Logo"
-                className="mx-auto aspect-[2/1] overflow-hidden rounded-lg object-contain object-center sm:w-full lg:order-last"
-                height="70"
-                src="/placeholder.svg"
-                width="140"
-              />
-              <img
-                alt="Logo"
-                className="mx-auto aspect-[2/1] overflow-hidden rounded-lg object-contain object-center sm:w-full lg:order-last"
-                height="70"
-                src="/placeholder.svg"
-                width="140"
-              />
             </div>
           </div>
         </section>
