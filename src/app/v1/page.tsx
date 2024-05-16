@@ -5,6 +5,7 @@ import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, Dropdown
 import ContactForm from "@/components/contact-form";
 import Testimonials from "./testimonials.component";
 import { Clock, Calculator, Target, Headphones, MessageCircle } from 'lucide-react';
+import Head from 'next/head'
 
 const services = [
     {
@@ -132,6 +133,9 @@ const services = [
 export default function Component() {
     return (
         <div className="flex flex-col min-h-screen">
+            <Head>
+                <script src="https://embed.tawk.to/664570369a809f19fb315b14/1htvjslse" async />
+            </Head>
             <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-white px-4 py-5 shadow-sm dark:bg-gray-950 md:px-6">
                 <div className="container mx-auto px-4 md:px-6">
                     <h1 className="text-2xl font-bold tracking-tight text-black sm:text-5xl md:text-6xl lg:text-7xl">Take Offer</h1>
