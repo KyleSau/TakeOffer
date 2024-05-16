@@ -88,7 +88,7 @@ const services = [
         image: "plumbing.jpeg",
     },
     {
-        title: "Reinforcing Steel Takeoff",
+        title: "Rebar Takeoff",
         description: "The quantities and specifications of reinforcing bars (rebar) required.",
         image: "rebar.jpg",
     },
