@@ -35,17 +35,17 @@ const services = [
     {
         title: "Electrical Estimating Services",
         description: "All lighting fixtures, switches, outlets, and other electrical components required for a construction project.",
-        image: "path_to_image/electrical.jpg",
+        image: "electric.jpeg",
     },
     {
         title: "Flooring Estimating Services",
         description: "The types, quantities, and costs of flooring materials needed for a project, including tile, hardwood, carpet, and underlayment.",
-        image: "path_to_image/flooring.jpg",
+        image: "flooring.webp",
     },
     {
         title: "Framing Takeoff",
         description: "All materials required for the structural framework, including lumber, nails, metal connectors, and sheathing.",
-        image: "path_to_image/framing.jpg",
+        image: "framing.jpeg",
     },
     {
         title: "Insulation Estimating Services",
@@ -55,7 +55,7 @@ const services = [
     {
         title: "Landscaping Estimating Services",
         description: "We calculate the quantities and types of materials needed for your landscaping projects.",
-        image: "path_to_image/landscaping.jpg",
+        image: "landscaping.jpeg",
     },
     {
         title: "Lumber Takeoff",
@@ -65,7 +65,7 @@ const services = [
     {
         title: "Masonry Estimating Services",
         description: "Quantifies the various types of bricks, blocks, stones, mortar, and other masonry materials needed.",
-        image: "path_to_image/masonry.jpg",
+        image: "masonry.jpeg",
     },
     {
         title: "Metal Framing Takeoff",
@@ -80,12 +80,12 @@ const services = [
     {
         title: "Painting Takeoff",
         description: "Assess the area to be painted, calculates the types and quantities of paint, primer, and other materials needed.",
-        image: "path_to_image/painting.jpg",
+        image: "painting.jpeg",
     },
     {
         title: "Plumbing Estimating Services",
         description: "The types and quantities of plumbing fixtures such as sinks, faucets, toilets, showers, and more.",
-        image: "path_to_image/plumbing.jpg",
+        image: "plumbing.jpeg",
     },
     {
         title: "Reinforcing Steel Takeoff",
