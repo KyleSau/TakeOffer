@@ -190,7 +190,7 @@ export default function Component() {
                                         <Mail className="h-6 w-6 text-gray-500 dark:text-gray-400" />
                                         <div>
                                             <div className="font-medium">Email</div>
-                                            <a className="text-gray-500 hover:underline dark:text-gray-400" href="#">
+                                            <a className="text-gray-500 hover:underline dark:text-gray-400" href="mailto:contact@takeoffer.net">
                                                 contact@takeoffer.net
                                             </a>
                                         </div>
@@ -199,7 +199,7 @@ export default function Component() {
                                         <Phone className="h-6 w-6 text-gray-500 dark:text-gray-400" />
                                         <div>
                                             <div className="font-medium">Phone</div>
-                                            <a className="text-gray-500 hover:underline dark:text-gray-400" href="#">
+                                            <a className="text-gray-500 hover:underline dark:text-gray-400" href="tel:+18159958820">
                                                 +1 (815) 995-8820
                                             </a>
                                         </div>
@@ -296,11 +296,16 @@ export default function Component() {
                         <div className="space-y-1">
                             <div className="flex items-center space-x-2">
                                 <Phone className="h-5 w-5" />
-                                <span>+1 (815) 995-8820</span>
+                                <a className="text-gray-500 hover:underline dark:text-gray-400" href="tel:+18159958820">
+                                    +1 (815) 995-8820
+                                </a>
+
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Mail className="h-5 w-5" />
-                                <span>contact@takeoffer.net</span>
+                                <a className="text-gray-500 hover:underline dark:text-gray-400" href="mailto:contact@takeoffer.net">
+                                    contact@takeoffer.net
+                                </a>
                             </div>
                         </div>
                     </div>
