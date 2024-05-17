@@ -1,143 +1,218 @@
 "use client"
 import React from 'react'
 import Navbar from '../navbar'
-import Footer from '../footer'
-import Link from 'next/link'
-import { Check } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
 
 export default function page() {
     return (
-        <div>
-            <Navbar />
-            <section className="container mx-auto py-12 md:py-24 lg:py-32 dark:bg-gray-800">
-                <div className="flex flex-col items-center">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">Our Pricing</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="col-span-1 bg-white dark:bg-gray-900 rounded-md p-8 shadow-lg">
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Single Trade Pricing</h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-4">Perfect for Single Trade Contractors</p>
-                            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-black dark:text-blue-400 mb-4">$149.99</p>
-                            <ul className="text-gray-600 dark:text-gray-400 mb-4">
-                                <li className="font-bold">Turnaround Time 24 to 48 Hrs</li>
-                                <hr />
-                                <li className="font-bold">Any Trade or Any Kind of Project</li>
-                                <hr />
-                                <li className="font-bold">Free Quote Within 5 to 10 Minutes</li>
-                                <hr />
-                                <li className="font-bold">Free Consultation</li>
-                                <hr />
-                                <li className="font-bold">Immediate and Unlimited Revisions</li>
-                                <hr />
-                                <li className="font-bold">24/7 Email Support</li>
-                                <hr />
-                                <li className="font-bold">Live Chat and Call Support</li>
-                                <hr />
-                                <li className="font-bold">No Hidden Charges</li>
-                                <hr />
-                                <li className="font-bold">Refund Policy (Risk Free)</li>
-                            </ul>
-                            <button className="bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">Get Started</button>
-                        </div>
-                        <div className="col-span-1 bg-white dark:bg-gray-900 rounded-md p-8 shadow-lg">
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Pro</h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-4">Ideal for medium-sized projects</p>
-                            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-black dark:text-blue-400 mb-4">$1500/mo</p>
-                            <ul className="text-gray-600 dark:text-gray-400 mb-4">
-                                <li className="font-bold">10 to 15 Projects</li>
-                                <hr />
-                                <li className="font-bold">Bid Filing and Consultation</li>
-                                <hr />
-                                <li className="font-bold">Material Takeoffs and Cost Management</li>
-                                <hr />
-                                <li className="font-bold">Turnaround Time 24 to 48 Hrs</li>
-                                <hr />
-                                <li className="font-bold">Any Trade or Any Kind of Project</li>
-                                <hr />
-                                <li className="font-bold">Free Quote Within 5 to 10 Minutes</li>
-                                <hr />
-                                <li className="font-bold">Free Consultation</li>
-                                <hr />
-                                <li className="font-bold">Immediate and Unlimited Revisions</li>
-                                <hr />
-                                <li className="font-bold">24/7 Email Support</li>
-                                <hr />
-                                <li className="font-bold">Live Chat and Call Support</li>
-                                <hr />
-                                <li className="font-bold">No Hidden Charges</li>
-                                <hr />
-                                <li className="font-bold">Refund Policy (Risk Free)</li>
-                            </ul>
-                            <button className="bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">Get Started</button>
-                        </div>
-                        <div className="col-span-1 bg-white dark:bg-gray-900 rounded-md p-8 shadow-lg">
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Enterprise</h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-4">For large-scale projects</p>
-                            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-black dark:text-blue-400 mb-4">Contact Us</p>
-                            <ul className="text-gray-600 dark:text-gray-400 mb-4">
-                                <li className="font-bold">Dedicated Resources</li>
-                                <hr />
-                                <hr />
-                                <hr />
-                                <li className="font-bold">Manage the bidding network profiles</li>
-                                <hr />
-                                <hr />
-                                <li className="font-bold">Material Takeoffs</li>
-                                <hr />
-                                <li className="font-bold">Subcontractor Marketing</li>
-                                <hr />
-                                <li className="font-bold">Generating New Project Leads</li>
-                                <hr />
-                                <li className="font-bold">Turnaround Time 24 to 48 Hrs</li>
-                                <hr />
-                                <li className="font-bold">Any Trade or Any Kind of Project</li>
-                                <hr />
-                                <li className="font-bold">Free Quote Within 5 to 10 Minutes</li>
-                                <hr />
-                                <li className="font-bold">Free Consultation</li>
-                                <hr />
-                                <li className="font-bold">Immediate and Unlimited Revisions</li>
-                                <hr />
-                                <li className="font-bold">24/7 Email Support</li>
-                                <hr />
-                                <li className="font-bold">Live Chat and Call Support</li>
-                                <hr />
-                                <li className="font-bold">No Hidden Charges</li>
-                                <hr />
-                                <li className="font-bold">Refund Policy (Risk Free)</li>
-                            </ul>
-                            <button className="bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">Contact Us</button>
-                        </div>
+        <div className="w-full py-12 md:py-24 lg:py-32">
+            <div className="container px-4 md:px-6">
+                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div className="space-y-2">
+                        <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Pricing</div>
+                        <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Choose the right plan for your needs</h2>
+                        <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed dark:text-gray-400">
+                            Flexible pricing options to fit your budget and requirements.
+                        </p>
                     </div>
                 </div>
-            </section>
-
-            <section className="container w-full py-5">
-                <div className="flex flex-col items-center">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
-                        <div className="col-span-1 flex flex-col items-center justify-center relative">
-                            <h2 className="text-6xl font-bold m-10">Our Service Process</h2>
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">1. Submit Your Floor Plans</h3>
-                            <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
-                                Please submit your drawings and specifications to us by attaching your documents through our contact form or by sending them directly to <Link href="mailto:contact@takeoffer.net" className="font-bold text-lg underline">contact@takeoffer.net</Link> We accept documents in PDF format for your convenience. If you have any inquiries or need assistance, feel free to reach out at any time. Our team is always ready to support you.
-                            </p>
-                            <a href="#" className="text-blue-600 hover:underline">Upload Drawing Plans ⟶</a>
-                        </div>
-                        <div className="col-span-1 flex flex-col items-center justify-center relative">
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">2. Get Your Project Quote</h3>
-                            <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
-                                After we look at your plans, we’ll quickly send you a free quote for estimation services and material takeoffs. If you say yes to our quote, we’ll start working on your project right away, making sure it fits your schedule and what you need. Then, we’ll get your project’s material takeoff ready for you.
-                            </p>
-                        </div>
-                        <div className="col-span-1 flex flex-col items-center justify-center relative">
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">3. Receive Your Estimate</h3>
-                            <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
-                                You’ll get an estimate from us with all the details and estimates your project needs. If you have questions at any point, our team is here to help you out.
-                            </p>
-                        </div>
-                    </div>
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-10 mt-10">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>Single Trade Pricing</CardTitle>
+                            <CardDescription>For individual projects</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="flex items-center justify-center">
+                                <span className="text-5xl font-bold">$149.99</span>
+                            </div>
+                            <Separator className="my-4" />
+                            <ul className="grid gap-2">
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Turnaround Time 24 to 48 Hrs</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Any Trade or Any Kind of Project</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Free Quote Within 5 to 10 Minutes</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Free Consultation</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Immediate and Unlimited Revisions</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>24/7 Email Support</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Live Chat and Call Support</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>No Hidden Charges</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Refund Policy (Risk Free)</span>
+                                </li>
+                            </ul>
+                        </CardContent>
+                        <CardFooter>
+                            <Button className="w-full" size="lg">
+                                Get Started
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>Pro</CardTitle>
+                            <CardDescription>For small businesses</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="flex items-center justify-center">
+                                <span className="text-5xl font-bold">$1500/mo</span>
+                            </div>
+                            <Separator className="my-4" />
+                            <ul className="grid gap-2">
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>10 to 15 Projects</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Bid Filing and Consultation</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Material Takeoffs and Cost Management</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Turnaround Time 24 to 48 Hrs</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Any Trade or Any Kind of Project</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Free Quote Within 5 to 10 Minutes</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Free Consultation</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Immediate and Unlimited Revisions</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>24/7 Email Support</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Live Chat and Call Support</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>No Hidden Charges</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Refund Policy (Risk Free)</span>
+                                </li>
+                            </ul>
+                        </CardContent>
+                        <CardFooter>
+                            <Button className="w-full" size="lg">
+                                Get Started
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>Enterprise</CardTitle>
+                            <CardDescription>For large organizations</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="flex items-center justify-center">
+                                <span className="text-5xl font-bold">Contact Us</span>
+                            </div>
+                            <Separator className="my-4" />
+                            <ul className="grid gap-2">
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Dedicated Resources</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Manage the bidding network profiles</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Material Takeoffs</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Subcontractor Marketing</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Generating New Project Leads</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Turnaround Time 24 to 48 Hrs</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Any Trade or Any Kind of Project</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <CheckIcon className="mt-1 h-4 w-4 text-green-500" />
+                                    <span>Free Quote</span>
+                                </li>
+                            </ul>
+                        </CardContent>
+                        <CardFooter>
+                            <Button className="w-full">
+                                Contact Sales
+                            </Button>
+                        </CardFooter>
+                    </Card>
                 </div>
-            </section>
-            <Footer />
+            </div>
         </div>
+    )
+}
+
+function CheckIcon(props) {
+    return (
+        <svg
+            {...props}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <path d="M20 6 9 17l-5-5" />
+        </svg>
     )
 }
