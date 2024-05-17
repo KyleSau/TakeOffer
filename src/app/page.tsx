@@ -354,7 +354,7 @@ export default function Component() {
                         </div>
                         <div className="grid gap-6 py-12">
                             {faqData.map((faq, index) => (
-                                <Accordion className="w-full" collapsible type="single">
+                                <Accordion key={index} className="w-full" collapsible type="single">
                                     <AccordionItem value="project-specialties">
                                         <AccordionTrigger key={index} className="text-xl font-bold">{faq.question}</AccordionTrigger>
                                         <AccordionContent>
