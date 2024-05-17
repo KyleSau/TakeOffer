@@ -9,6 +9,108 @@ export default function page() {
     return (
         <div>
             <Navbar />
+            <section className="container mx-auto py-12 md:py-24 lg:py-32 dark:bg-gray-800">
+                <div className="flex flex-col items-center">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">Our Pricing</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="col-span-1 bg-white dark:bg-gray-900 rounded-md p-8 shadow-lg">
+                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Single Trade Pricing</h3>
+                            <p className="text-gray-600 dark:text-gray-400 mb-4">Perfect for Single Trade Contractors</p>
+                            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-black dark:text-blue-400 mb-4">$149.99</p>
+                            <ul className="text-gray-600 dark:text-gray-400 mb-4">
+                                <li className="font-bold">Turnaround Time 24 to 48 Hrs</li>
+                                <hr />
+                                <li className="font-bold">Any Trade or Any Kind of Project</li>
+                                <hr />
+                                <li className="font-bold">Free Quote Within 5 to 10 Minutes</li>
+                                <hr />
+                                <li className="font-bold">Free Consultation</li>
+                                <hr />
+                                <li className="font-bold">Immediate and Unlimited Revisions</li>
+                                <hr />
+                                <li className="font-bold">24/7 Email Support</li>
+                                <hr />
+                                <li className="font-bold">Live Chat and Call Support</li>
+                                <hr />
+                                <li className="font-bold">No Hidden Charges</li>
+                                <hr />
+                                <li className="font-bold">Refund Policy (Risk Free)</li>
+                            </ul>
+                            <button className="bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">Get Started</button>
+                        </div>
+                        <div className="col-span-1 bg-white dark:bg-gray-900 rounded-md p-8 shadow-lg">
+                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Pro</h3>
+                            <p className="text-gray-600 dark:text-gray-400 mb-4">Ideal for medium-sized projects</p>
+                            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-black dark:text-blue-400 mb-4">$1500/mo</p>
+                            <ul className="text-gray-600 dark:text-gray-400 mb-4">
+                                <li className="font-bold">10 to 15 Projects</li>
+                                <hr />
+                                <li className="font-bold">Bid Filing and Consultation</li>
+                                <hr />
+                                <li className="font-bold">Material Takeoffs and Cost Management</li>
+                                <hr />
+                                <li className="font-bold">Turnaround Time 24 to 48 Hrs</li>
+                                <hr />
+                                <li className="font-bold">Any Trade or Any Kind of Project</li>
+                                <hr />
+                                <li className="font-bold">Free Quote Within 5 to 10 Minutes</li>
+                                <hr />
+                                <li className="font-bold">Free Consultation</li>
+                                <hr />
+                                <li className="font-bold">Immediate and Unlimited Revisions</li>
+                                <hr />
+                                <li className="font-bold">24/7 Email Support</li>
+                                <hr />
+                                <li className="font-bold">Live Chat and Call Support</li>
+                                <hr />
+                                <li className="font-bold">No Hidden Charges</li>
+                                <hr />
+                                <li className="font-bold">Refund Policy (Risk Free)</li>
+                            </ul>
+                            <button className="bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">Get Started</button>
+                        </div>
+                        <div className="col-span-1 bg-white dark:bg-gray-900 rounded-md p-8 shadow-lg">
+                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Enterprise</h3>
+                            <p className="text-gray-600 dark:text-gray-400 mb-4">For large-scale projects</p>
+                            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-black dark:text-blue-400 mb-4">Contact Us</p>
+                            <ul className="text-gray-600 dark:text-gray-400 mb-4">
+                                <li className="font-bold">Dedicated Resources</li>
+                                <hr />
+                                <hr />
+                                <hr />
+                                <li className="font-bold">Manage the bidding network profiles</li>
+                                <hr />
+                                <hr />
+                                <li className="font-bold">Material Takeoffs</li>
+                                <hr />
+                                <li className="font-bold">Subcontractor Marketing</li>
+                                <hr />
+                                <li className="font-bold">Generating New Project Leads</li>
+                                <hr />
+                                <li className="font-bold">Turnaround Time 24 to 48 Hrs</li>
+                                <hr />
+                                <li className="font-bold">Any Trade or Any Kind of Project</li>
+                                <hr />
+                                <li className="font-bold">Free Quote Within 5 to 10 Minutes</li>
+                                <hr />
+                                <li className="font-bold">Free Consultation</li>
+                                <hr />
+                                <li className="font-bold">Immediate and Unlimited Revisions</li>
+                                <hr />
+                                <li className="font-bold">24/7 Email Support</li>
+                                <hr />
+                                <li className="font-bold">Live Chat and Call Support</li>
+                                <hr />
+                                <li className="font-bold">No Hidden Charges</li>
+                                <hr />
+                                <li className="font-bold">Refund Policy (Risk Free)</li>
+                            </ul>
+                            <button className="bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className="container w-full py-5">
                 <div className="flex flex-col items-center">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
@@ -35,86 +137,6 @@ export default function page() {
                     </div>
                 </div>
             </section>
-            <section className="container mx-auto py-12 md:py-24 lg:py-32 dark:bg-gray-800">
-                <div className="flex flex-col items-center">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">Our Pricing</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="col-span-1 bg-white dark:bg-gray-900 rounded-md p-8 shadow-lg">
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Single Trade Pricing</h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-4">Perfect for Single Trade Contractors</p>
-                            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-4">$100</p>
-                            <ul className="text-gray-600 dark:text-gray-400 mb-4">
-                                <li className="font-bold"><Check />Turnaround Time 24 to 48 Hrs</li>
-                                <hr />
-                                <li className="font-bold">Any Trade or Any Kind of Project</li>
-                                <hr />
-                                <li className="font-bold">Free Quote Within 5 to 10 Minutes</li>
-                                <hr />
-                                <li className="font-bold">Free Consultation</li>
-                                <hr />
-                                <li className="font-bold">Immediate and Unlimited Revisions</li>
-                                <hr />
-                                <li className="font-bold">24/7 Email Support</li>
-                                <hr />
-                                <li className="font-bold">Live Chat and Call Support</li>
-                                <hr />
-                                <li className="font-bold">No Hidden Charges</li>
-                                <hr />
-                                <li className="font-bold">Refund Policy (Risk Free)</li>
-                            </ul>
-                            <button className="bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">Get Started</button>
-                        </div>
-                        <div className="col-span-1 bg-white dark:bg-gray-900 rounded-md p-8 shadow-lg">
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Pro</h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-4">Ideal for medium-sized projects</p>
-                            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-4">$1500/mo</p>
-                            <ul className="text-gray-600 dark:text-gray-400 mb-4">
-                                <li>10 to 15 Projects</li>
-                                <li>Bid Filing and Consultation</li>
-                                <li>Material Takeoffs and Cost Management</li>
-                                <li>Turnaround Time 24 to 48 Hrs</li>
-                                <li>Any Trade or Any Kind of Project</li>
-                                <li>Free Quote Within 5 to 10 Minutes</li>
-                                <li>Free Consultation</li>
-                                <li>Immediate and Unlimited Revisions</li>
-                                <li>24/7 Email Support</li>
-                                <li>Live Chat and Call Support</li>
-                                <li>No Hidden Charges</li>
-                                <li>Refund Policy (Risk Free)</li>
-                            </ul>
-                            <button className="bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">Get Started</button>
-                        </div>
-                        <div className="col-span-1 bg-white dark:bg-gray-900 rounded-md p-8 shadow-lg">
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-4">Enterprise</h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-4">For large-scale projects</p>
-                            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-4">Contact Us</p>
-                            <ul className="text-gray-600 dark:text-gray-400 mb-4">
-                                <li>Dedicated Resources</li>
-                                <li>Feasibility Studies</li>
-                                <li>Consultation on smartly filing bids</li>
-                                <li>Manage the bidding network profiles</li>
-                                <li>Project Scheduling</li>
-                                <li>Material Takeoffs</li>
-                                <li>Cost Management</li>
-                                <li>Preconstruction & Change Order Management</li>
-                                <li>Subcontractor Marketing</li>
-                                <li>Generating New Project Leads</li>
-                                <li>Turnaround Time 24 to 48 Hrs</li>
-                                <li>Any Trade or Any Kind of Project</li>
-                                <li>Free Quote Within 5 to 10 Minutes</li>
-                                <li>Free Consultation</li>
-                                <li>Immediate and Unlimited Revisions</li>
-                                <li>24/7 Email Support</li>
-                                <li>Live Chat and Call Support</li>
-                                <li>No Hidden Charges</li>
-                                <li>Refund Policy (Risk Free)</li>
-                            </ul>
-                            <button className="bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 px-6 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">Contact Us</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <Footer />
         </div>
     )
