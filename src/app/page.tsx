@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CardContent, Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ContactForm from "@/components/contact-form";
 import Testimonials from "./testimonials.component";
-import { CircleCheckBig, Mail, Phone, X, Menu, Clock, Calculator, Target, Headphones, MessageCircle, MailIcon, PhoneIcon, ClockIcon, CircleDollarSign, Check, LineChart } from 'lucide-react';
+import { FileSpreadsheet, Upload, CircleCheckBig, Mail, Phone, X, Menu, Clock, Calculator, Target, Headphones, MessageCircle, MailIcon, PhoneIcon, ClockIcon, CircleDollarSign, Check, LineChart } from 'lucide-react';
 import Navbar from "./navbar";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
@@ -35,6 +35,9 @@ const faqData = [
 ]
 
 import Footer from "./footer";
+import { Input } from "@/components/ui/input";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import { useState } from "react";
 
 const services = [
     {
@@ -161,6 +164,8 @@ const services = [
 
 export default function Component() {
 
+    const [searchQuery, setSearchQuery] = useState('');
+
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
@@ -192,7 +197,7 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-                <section className="container mx-auto py-6 dark:bg-gray-800">
+                {/* <section className="container mx-auto py-6 dark:bg-gray-800">
                     <div className="flex flex-col items-center mb-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             <div className="col-span-1 flex flex-col items-center justify-center h-full">
@@ -225,34 +230,141 @@ export default function Component() {
                             </div>
                         </div>
                     </div>
+                </section> */}
+                <section className="container mx-auto py-6 dark:bg-gray-800">
+                    {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"> */}
+                    <div className="container px-4 md:px-6">
+                        <div className="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
+                            <div className="flex flex-col justify-center space-y-4">
+                                <div className="space-y-2">
+                                    {/* <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-700">Services</div> */}
+                                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Streamline Your Projects</h2>
+                                    <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                        Our estimation and takeoff services provide the competitive edge you need to succeed.
+                                    </p>
+                                </div>
+                                <ul className="grid gap-4">
+                                    <li className="flex items-start gap-4">
+                                        <CircleDollarSign className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                        <div>
+                                            <h4 className="font-medium">Competitive Pricing</h4>
+                                            <p className="text-gray-500 dark:text-gray-400">
+                                                Accurate construction estimates with a 99% accuracy rate, ensuring a balanced budget and no
+                                                overruns.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <Calculator className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                        <div>
+                                            <h4 className="font-medium">Cost-Effective</h4>
+                                            <p className="text-gray-500 dark:text-gray-400">
+                                                Affordable outsourcing solutions that eliminate the need for a full-time estimator, allowing clients
+                                                to pay only for the hours they require.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <Clock className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                        <div>
+                                            <h4 className="font-medium">Fast Turnaround Time</h4>
+                                            <p className="text-gray-500 dark:text-gray-400">
+                                                Prompt estimates and takeoffs to help clients stay ahead of the competition and meet their
+                                                deadlines.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <LineChart className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                        <div>
+                                            <h4 className="font-medium">Efficiency and Growth</h4>
+                                            <p className="text-gray-500 dark:text-gray-400">
+                                                Streamlined operations that free up resources, allowing clients to focus on expansion and growth.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <img
+                                alt="Image"
+                                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                                height="310"
+                                src="/takeoff.webp"
+                                width="550"
+                            />
+                        </div>
+                    </div>
                 </section>
-                <section className="container bg-gray-100 w-full py-5">
-                    <div className="flex flex-col items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
-                            <div className="col-span-1 flex flex-col items-center justify-center relative">
-                                <h2 className="text-3xl text-gray-500 font-bold m-10">Our Service Process</h2>
-                                <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">1. Submit Your Floor Plans</h3>
-                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
-                                    Please submit your drawings and specifications to us by attaching your documents through our contact form or by sending them directly to <Link href="mailto:contact@takeoffer.net" className="font-bold text-lg underline">contact@takeoffer.net</Link> We accept documents in PDF format for your convenience. If you have any inquiries or need assistance, feel free to reach out at any time. Our team is always ready to support you.
-                                </p>
-                                <a href="#contact" className="text-blue-600 hover:underline">Upload Drawing Plans ⟶</a>
+                <section className="w-full py-6 md:py-12 lg:py-16">
+                    <div className="container grid gap-12 px-4 md:px-6">
+                        <div className="space-y-6">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Process</h2>
+                            <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                Here's a breakdown of how you can use our service:
+                            </p>
+                        </div>
+                        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+                            <div className="space-y-4">
+                                <div className="flex items-start gap-4">
+                                    <div className="bg-white text-gray-900 rounded-full w-10 h-10 flex items-center justify-center dark:bg-gray-50 dark:text-gray-900">
+                                        <Upload className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold">Submit Your Floor Plans</h3>
+                                        <p className="text-gray-500 dark:text-gray-400">
+                                            Please submit your drawings and specifications to us by attaching your documents through our contact
+                                            form or by sending them directly to contact@takeoffer.net. We accept documents in PDF format for your
+                                            convenience. If you have any inquiries or need assistance, feel free to reach out at any time. Our
+                                            team is always ready to support you.
+                                        </p>
+                                        {/* <div className="flex items-center gap-2 pt-2">
+                                            <DownloadIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                                            <span className="text-sm text-gray-500 dark:text-gray-400">Download template</span>
+                                        </div> */}
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col-span-1 flex flex-col items-center justify-center relative">
-                                <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">2. Get Your Project Quote</h3>
-                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
-                                    After we look at your plans, we’ll quickly send you a free quote for estimation services and material takeoffs. If you say yes to our quote, we’ll start working on your project right away, making sure it fits your schedule and what you need. Then, we’ll get your project’s material takeoff ready for you.
-                                </p>
+                            <div className="space-y-4">
+                                <div className="flex items-start gap-4">
+                                    <div className="bg-white text-gray-900 rounded-full w-10 h-10 flex items-center justify-center dark:bg-gray-50 dark:text-gray-900">
+                                        <QuoteIcon className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold">Get Your Project Quote</h3>
+                                        <p className="text-gray-500 dark:text-gray-400">
+                                            After we look at your plans, we'll quickly send you a free quote for estimation services and material
+                                            takeoffs. If you say yes to our quote, we'll start working on your project right away, making sure it
+                                            fits your schedule and what you need. Then, we'll get your project's material takeoff ready for you.
+                                        </p>
+                                        {/* <div className="flex items-center gap-2 pt-2">
+                                            <QuoteIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                                            <span className="text-sm text-gray-500 dark:text-gray-400">View sample quote</span>
+                                        </div> */}
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col-span-1 flex flex-col items-center justify-center relative">
-                                <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">3. Receive Your Estimate</h3>
-                                <p className="text-base md:text-lg lg:text-base text-gray-700 dark:text-gray-300 p-5 w-3/4">
-                                    You’ll get an estimate from us with all the details and estimates your project needs. If you have questions at any point, our team is here to help you out.
-                                </p>
+                            <div className="space-y-4">
+                                <div className="flex items-start gap-4">
+                                    <div className="bg-white text-gray-900 rounded-full w-10 h-10 flex items-center justify-center dark:bg-gray-50 dark:text-gray-900">
+                                        <FileSpreadsheet className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold">Receive Your Estimate</h3>
+                                        <p className="text-gray-500 dark:text-gray-400">
+                                            You'll get an estimate from us with all the details and estimates your project needs. If you have
+                                            questions at any point, our team is here to help you out.
+                                        </p>
+                                        {/* <div className="flex items-center gap-2 pt-2">
+                                            <CurrencyIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
+                                            <span className="text-sm text-gray-500 dark:text-gray-400">View sample estimate</span>
+                                        </div> */}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-white">
+                <section id="contact" className="w-full py-6 md:py-12 lg:py-16 bg-white">
                     <div className="container">
                         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
                             <div className="space-y-4">
@@ -296,7 +408,7 @@ export default function Component() {
                             </div>
                             <div className="flex items-center justify-center">
                                 <div className="flex min-[400px]:flex-row justify-center">
-                                    <Card className="w-full w-3/4">
+                                    <Card className="w-full">
                                         <CardHeader>
                                             <CardTitle>Contact Form</CardTitle>
                                             <CardDescription>
@@ -312,7 +424,57 @@ export default function Component() {
                         </div>
                     </div>
                 </section>
-                <section id="services" className="flex justify-center w-full py-6 md:py-12 lg:py-16">
+                <section className="w-full py-6 md:py-12 lg:py-16">
+                    <div className="container px-4 md:px-6">
+                        <div className="grid gap-6 md:gap-8">
+                            <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
+                                <div className="grid gap-1">
+                                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Services</h2>
+                                    <p className="text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                                        Explore our wide range of services to find the perfect solution for your needs.
+                                    </p>
+                                </div>
+                                <div className="w-full md:w-auto">
+                                    <Input
+                                        className="w-full md:w-[300px]"
+                                        placeholder="Search services..."
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                                {services
+                                    .filter(service => service.title.toLowerCase().includes(searchQuery.toLowerCase()))
+                                    .map((service, index) => (
+                                        <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2">
+                                            <Link className="absolute inset-0 z-10" href="#">
+                                                <span className="sr-only">View</span>
+                                            </Link>
+                                            <img
+                                                alt={service.image}
+                                                className="object-cover w-full h-60"
+                                                height={300}
+                                                src={service.image}
+                                                style={{
+                                                    aspectRatio: "500/300",
+                                                    objectFit: "cover",
+                                                }}
+                                                width={500}
+                                            />
+                                            <div className="bg-white p-4 dark:bg-gray-950">
+                                                <h3 className="font-bold text-xl">{service.title}</h3>
+                                                <p className="text-sm text-gray-500 dark:text-gray-400">
+                                                    {service.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* <section id="services" className="flex justify-center w-full py-6 md:py-12 lg:py-16">
                     <div className="container px-4 md:px-6">
                         <div className="space-y-2">
                             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl text-gray-800 dark:text-gray-50">
@@ -334,9 +496,66 @@ export default function Component() {
                             ))}
                         </div>
                     </div>
-                </section>
-                <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800">
+                </section> */}
+                {/* <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-white dark:bg-gray-800">
                     <Testimonials />
+                </section> */}
+                <section className="w-full py-12 md:py-24 lg:py-32">
+                    <div className="container px-4 md:px-6">
+                        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                            <div className="space-y-2">
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Customers Say</h2>
+                                <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                    Hear from our satisfied customers about their experience with our product.
+                                </p>
+                            </div>
+                            <Carousel className="w-full max-w-3xl">
+                                <CarouselContent>
+                                    <CarouselItem>
+                                        <div className="p-4 md:p-6">
+                                            <blockquote className="text-lg font-semibold leading-snug lg:text-xl lg:leading-normal xl:text-2xl">
+                                                “The customer service I received was exceptional. The support team went above and beyond to address
+                                                my concerns.”
+                                            </blockquote>
+                                            <div className="mt-4 flex items-center justify-center space-x-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                                                <div>Jules Winnfield</div>
+                                                <div className="h-1 w-1 rounded-full bg-gray-300 dark:bg-gray-700" />
+                                                <div>CEO, Acme Inc</div>
+                                            </div>
+                                        </div>
+                                    </CarouselItem>
+                                    <CarouselItem>
+                                        <div className="p-4 md:p-6">
+                                            <blockquote className="text-lg font-semibold leading-snug lg:text-xl lg:leading-normal xl:text-2xl">
+                                                “I was hesitant at first, but after using the product, I was blown away by its capabilities. It has
+                                                truly transformed the way I work.”
+                                            </blockquote>
+                                            <div className="mt-4 flex items-center justify-center space-x-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                                                <div>Mia Wallace</div>
+                                                <div className="h-1 w-1 rounded-full bg-gray-300 dark:bg-gray-700" />
+                                                <div>Product Manager, Umbrella Corp</div>
+                                            </div>
+                                        </div>
+                                    </CarouselItem>
+                                    <CarouselItem>
+                                        <div className="p-4 md:p-6">
+                                            <blockquote className="text-lg font-semibold leading-snug lg:text-xl lg:leading-normal xl:text-2xl">
+                                                “I was impressed by the attention to detail and the overall user experience. It's clear the team put
+                                                a lot of thought into the design.”
+                                            </blockquote>
+                                            <div className="mt-4 flex items-center justify-center space-x-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                                                <div>Vincent Vega</div>
+                                                <div className="h-1 w-1 rounded-full bg-gray-300 dark:bg-gray-700" />
+                                                <div>UX Designer, Acme Inc</div>
+                                            </div>
+                                        </div>
+                                    </CarouselItem>
+                                </CarouselContent>
+                                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
+                                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+                            </Carousel>
+                        </div>
+                    </div>
                 </section>
                 <section className="w-full py-12 md:py-24 lg:py-32">
                     <div className="container px-4 md:px-6">
@@ -373,4 +592,115 @@ export default function Component() {
             <Footer />
         </div >
     );
+}
+
+function QuoteIcon(props) {
+    return (
+        <svg
+            {...props}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+        </svg>
+    )
+}
+
+function CurrencyIcon(props) {
+    return (
+        <svg
+            {...props}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <circle cx="12" cy="12" r="8" />
+            <line x1="3" x2="6" y1="3" y2="6" />
+            <line x1="21" x2="18" y1="3" y2="6" />
+            <line x1="3" x2="6" y1="21" y2="18" />
+            <line x1="21" x2="18" y1="21" y2="18" />
+        </svg>
+    )
+}
+
+
+function DownloadIcon(props) {
+    return (
+        <svg
+            {...props}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" x2="12" y1="15" y2="3" />
+        </svg>
+    )
+}
+
+
+function Heading1Icon(props) {
+    return (
+        <svg
+            {...props}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <path d="M4 12h8" />
+            <path d="M4 18V6" />
+            <path d="M12 18V6" />
+            <path d="m17 12 3-2v8" />
+        </svg>
+    )
+}
+
+
+function Heading2Icon(props) {
+    return (
+        <svg
+            {...props}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <path d="M4 12h8" />
+            <path d="M4 18V6" />
+            <path d="M12 18V6" />
+            <path d="M21 18h-4c0-4 4-3 4-6 0-1.5-2-2.5-4-1" />
+        </svg>
+    )
 }
